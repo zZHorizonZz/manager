@@ -1,18 +1,26 @@
-import { useQuery } from '@tanstack/react-query';
+import {
+  useInfiniteQuery,
+  UseInfiniteQueryOptions,
+  UseInfiniteQueryResult,
+} from '@tanstack/react-query';
 import { useSearchParams } from 'react-router-dom';
 import { usePlatform } from '@/hooks';
 import {
-  getZimbraPlatformAccount,
-  getZimbraPlatformAccountQueryKey,
+  AccountType,
+  getZimbraPlatformAccounts,
+  getZimbraPlatformAccountsQueryKey,
 } from '@/api/account';
 
-interface UseAccountListParams {
+type UseAccountListParams = Omit<
+  UseInfiniteQueryOptions,
+  'queryKey' | 'queryFn' | 'select' | 'getNextPageParam' | 'initialPageParam'
+> & {
   domainId?: string;
   organizationId?: string;
-}
+};
 
 export const useAccountList = (props: UseAccountListParams = {}) => {
-  const { domainId, organizationId } = props;
+  const { domainId, organizationId, ...options } = props;
   const { platformId } = usePlatform();
   const [searchParams] = useSearchParams();
 
@@ -25,16 +33,26 @@ export const useAccountList = (props: UseAccountListParams = {}) => {
     ...(selectedDomainId && { domainId: selectedDomainId }),
   };
 
-  const { data, isLoading, isError, error } = useQuery({
-    queryKey: getZimbraPlatformAccountQueryKey(platformId, queryParameters),
-    queryFn: () => getZimbraPlatformAccount(platformId, queryParameters),
-    enabled: !!platformId,
+  return useInfiniteQuery({
+    ...options,
+    initialPageParam: null,
+    queryKey: getZimbraPlatformAccountsQueryKey(platformId, queryParameters),
+    queryFn: ({ pageParam }) =>
+      getZimbraPlatformAccounts({
+        platformId,
+        queryParameters,
+        pageParam,
+      }),
+    enabled: (query) =>
+      (typeof options.enabled === 'function'
+        ? options.enabled(query)
+        : typeof options.enabled !== 'boolean' || options.enabled) &&
+      !!platformId,
+    getNextPageParam: (lastPage: { cursorNext?: string }) =>
+      lastPage.cursorNext,
+    select: (data) =>
+      data?.pages.flatMap(
+        (page: UseInfiniteQueryResult<AccountType[]>) => page.data,
+      ),
   });
-
-  return {
-    isLoading,
-    isError,
-    error,
-    data,
-  };
 };

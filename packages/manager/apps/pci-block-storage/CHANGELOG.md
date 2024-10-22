@@ -3,6 +3,189 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.18](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-block-storage-app@0.5.17...@ovh-ux/manager-pci-block-storage-app@0.5.18) (2024-10-22)
+
+**Note:** Version bump only for package @ovh-ux/manager-pci-block-storage-app
+
+
+
+
+
+## [0.5.17](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-block-storage-app@0.5.16...@ovh-ux/manager-pci-block-storage-app@0.5.17) (2024-10-21)
+
+**Note:** Version bump only for package @ovh-ux/manager-pci-block-storage-app
+
+
+
+
+
+## [0.5.16](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-block-storage-app@0.5.15...@ovh-ux/manager-pci-block-storage-app@0.5.16) (2024-10-17)
+
+**Note:** Version bump only for package @ovh-ux/manager-pci-block-storage-app
+
+
+
+
+
+## [0.5.15](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-block-storage-app@0.5.14...@ovh-ux/manager-pci-block-storage-app@0.5.15) (2024-10-15)
+
+**Note:** Version bump only for package @ovh-ux/manager-pci-block-storage-app
+
+
+
+
+
+## [0.5.14](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-block-storage-app@0.5.13...@ovh-ux/manager-pci-block-storage-app@0.5.14) (2024-10-11)
+
+**Note:** Version bump only for package @ovh-ux/manager-pci-block-storage-app
+
+
+
+
+
+## [0.5.13](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-block-storage-app@0.5.12...@ovh-ux/manager-pci-block-storage-app@0.5.13) (2024-10-10)
+
+**Note:** Version bump only for package @ovh-ux/manager-pci-block-storage-app
+
+
+
+
+
+## [0.5.12](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-block-storage-app@0.5.11...@ovh-ux/manager-pci-block-storage-app@0.5.12) (2024-10-10)
+
+**Note:** Version bump only for package @ovh-ux/manager-pci-block-storage-app
+
+
+
+
+
+## [0.5.11](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-block-storage-app@0.5.10...@ovh-ux/manager-pci-block-storage-app@0.5.11) (2024-10-08)
+
+**Note:** Version bump only for package @ovh-ux/manager-pci-block-storage-app
+
+
+
+
+
+## [0.5.10](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-block-storage-app@0.5.9...@ovh-ux/manager-pci-block-storage-app@0.5.10) (2024-10-07)
+
+
+### Bug Fixes
+
+* **pci.block-storage:** remove unwanted discovery banner ([#13236](https://github.com/ovh/manager/issues/13236)) ([9a2d181](https://github.com/ovh/manager/commit/9a2d181ced9492e7f1926ddc4a1bcb45fab0d394))
+
+
+
+
+
+## [0.5.9](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-block-storage-app@0.5.8...@ovh-ux/manager-pci-block-storage-app@0.5.9) (2024-10-04)
+
+**Note:** Version bump only for package @ovh-ux/manager-pci-block-storage-app
+
+
+
+
+
+## [0.5.8](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-block-storage-app@0.5.7...@ovh-ux/manager-pci-block-storage-app@0.5.8) (2024-10-03)
+
+**Note:** Version bump only for package @ovh-ux/manager-pci-block-storage-app
+
+
+
+
+
+## [0.5.7](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-block-storage-app@0.5.6...@ovh-ux/manager-pci-block-storage-app@0.5.7) (2024-10-03)
+
+**Note:** Version bump only for package @ovh-ux/manager-pci-block-storage-app
+
+
+
+
+
+## [0.5.6](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-block-storage-app@0.5.5...@ovh-ux/manager-pci-block-storage-app@0.5.6) (2024-10-02)
+
+**Note:** Version bump only for package @ovh-ux/manager-pci-block-storage-app
+
+
+
+
+
+## [0.5.5](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-block-storage-app@0.5.4...@ovh-ux/manager-pci-block-storage-app@0.5.5) (2024-09-30)
+
+
+### Bug Fixes
+
+* **pci.block-storage:** add us link ([#12831](https://github.com/ovh/manager/issues/12831)) ([a6356b6](https://github.com/ovh/manager/commit/a6356b6b0d345fb9b4e850913b278e89fb17713e))
+
+
+
+
+
+## [0.5.4](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-block-storage-app@0.5.3...@ovh-ux/manager-pci-block-storage-app@0.5.4) (2024-09-27)
+
+**Note:** Version bump only for package @ovh-ux/manager-pci-block-storage-app
+
+
+
+
+
+## [0.5.3](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-block-storage-app@0.5.2...@ovh-ux/manager-pci-block-storage-app@0.5.3) (2024-09-26)
+
+**Note:** Version bump only for package @ovh-ux/manager-pci-block-storage-app
+
+
+
+
+
+## [0.5.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-block-storage-app@0.5.1...@ovh-ux/manager-pci-block-storage-app@0.5.2) (2024-09-26)
+
+**Note:** Version bump only for package @ovh-ux/manager-pci-block-storage-app
+
+
+
+
+
+## [0.5.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-block-storage-app@0.5.0...@ovh-ux/manager-pci-block-storage-app@0.5.1) (2024-09-19)
+
+**Note:** Version bump only for package @ovh-ux/manager-pci-block-storage-app
+
+
+
+
+
+# [0.5.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-block-storage-app@0.4.3...@ovh-ux/manager-pci-block-storage-app@0.5.0) (2024-09-18)
+
+
+### Bug Fixes
+
+* rebase on master ([7f91c5f](https://github.com/ovh/manager/commit/7f91c5f361ff451cbe939760b85016870ded0c9c))
+
+
+### Features
+
+* **pci-block-storage:** use banner and useProject from pci common ([c2268c8](https://github.com/ovh/manager/commit/c2268c8bc841e9c2f812de2167c21b3ed9cc5177))
+* **pci-kubernetes:** init react apps ([4acd566](https://github.com/ovh/manager/commit/4acd566cd2e1b62fcf90658e18b27135ffaad067))
+
+
+
+
+
+## [0.4.3](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-block-storage-app@0.4.2...@ovh-ux/manager-pci-block-storage-app@0.4.3) (2024-09-12)
+
+**Note:** Version bump only for package @ovh-ux/manager-pci-block-storage-app
+
+
+
+
+
+## [0.4.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-block-storage-app@0.4.1...@ovh-ux/manager-pci-block-storage-app@0.4.2) (2024-09-11)
+
+**Note:** Version bump only for package @ovh-ux/manager-pci-block-storage-app
+
+
+
+
+
 ## [0.4.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-block-storage-app@0.4.0...@ovh-ux/manager-pci-block-storage-app@0.4.1) (2024-09-09)
 
 

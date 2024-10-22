@@ -109,3 +109,44 @@ export interface RancherVersion {
   changelogUrl?: string;
   cause?: 'CANNOT_UPGRADE_MULTIPLE_VERSIONS' | 'DEPRECATED' | 'DISABLED';
 }
+
+export enum RancherPlanName {
+  OVHCLOUD_EDITION = 'OVHCLOUD_EDITION',
+  STANDARD = 'STANDARD',
+}
+
+export enum RancherPlanCode {
+  OVHCLOUD_EDITION = 'rancher.ovhcloud-edition.hour.consumption',
+  STANDARD = 'rancher.standard.hour.consumption',
+}
+
+export type TPricing = {
+  capacities: string[];
+  mode: string;
+  phase: number;
+  commitment: number;
+  description: string;
+  price: number;
+  tax: number;
+  interval: number;
+  intervalUnit: string;
+  quantity: {
+    max?: number;
+    min?: number;
+  };
+  repeat: {
+    max?: number;
+    min?: number;
+  };
+  strategy: string;
+  mustBeCompleted: boolean;
+  type: string;
+  promotions: unknown[];
+  engagementConfiguration?: unknown;
+};
+
+export type TRancherPricing = {
+  name: string;
+  hourlyPrice: number;
+  monthlyPrice: number;
+};

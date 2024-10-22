@@ -40,7 +40,7 @@
   "sidebar_pci_volume_snapshot": "Volume Snapshot ",
   "sidebar_pci_instance_backup": "Instance Backup",
   "sidebar_pci_load_balancer": "Load Balancer",
-  "sidebar_pci_private_network": "Private network (vRack)",
+  "sidebar_pci_private_network": "Private Network",
   "sidebar_pci_failover_ip": "Failover IP",
   "sidebar_pci_rancher": "Managed Rancher Service",
   "sidebar_pci_kubernetes": "Managed Kubernetes Service",
@@ -194,5 +194,16 @@
   "sidebar_back_menu": "Back to menu",
   "sidebar_identity_security_operations": "Identity, Security &amp; Operations",
   "sidebar_key-management-service": "Key Management Service",
-  "sidebar_zimbra": "Zimbra"
+  "sidebar_zimbra": "Zimbra Mail",
+  "sidebar_pci_ai_dashboard": "AI Dashboard",
+  "sidebar_security_operations": "Operations",
+  "sidebar_security_identity": "Identity and Security",
+  "sidebar_reduce": "Minimise",
+  "sidebar_pci_savings_plan": "Savings Plan",
+  "sidebar_hycu": "HYCU",
+  "sidebar_all_hycu": "All my licenses",
+  "sidebar_veeam_backup": "Managed Veeam for VCD",
+  "sidebar_all_veeam_backup": "All services",
+  "sidebar_vmware_vsphere": "Managed VMware vSphere",
+  "sidebar_vmware_vcd": "Managed VCD"
 }

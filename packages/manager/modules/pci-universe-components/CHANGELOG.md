@@ -3,6 +3,62 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.24](https://github.com/ovh/manager/compare/@ovh-ux/ng-ovh-pci-universe-components@1.1.23...@ovh-ux/ng-ovh-pci-universe-components@1.1.24) (2024-10-21)
+
+**Note:** Version bump only for package @ovh-ux/ng-ovh-pci-universe-components
+
+
+
+
+
+## [1.1.23](https://github.com/ovh/manager/compare/@ovh-ux/ng-ovh-pci-universe-components@1.1.22...@ovh-ux/ng-ovh-pci-universe-components@1.1.23) (2024-10-08)
+
+**Note:** Version bump only for package @ovh-ux/ng-ovh-pci-universe-components
+
+
+
+
+
+## [1.1.22](https://github.com/ovh/manager/compare/@ovh-ux/ng-ovh-pci-universe-components@1.1.21...@ovh-ux/ng-ovh-pci-universe-components@1.1.22) (2024-10-03)
+
+**Note:** Version bump only for package @ovh-ux/ng-ovh-pci-universe-components
+
+
+
+
+
+## [1.1.21](https://github.com/ovh/manager/compare/@ovh-ux/ng-ovh-pci-universe-components@1.1.20...@ovh-ux/ng-ovh-pci-universe-components@1.1.21) (2024-09-26)
+
+**Note:** Version bump only for package @ovh-ux/ng-ovh-pci-universe-components
+
+
+
+
+
+## [1.1.20](https://github.com/ovh/manager/compare/@ovh-ux/ng-ovh-pci-universe-components@1.1.19...@ovh-ux/ng-ovh-pci-universe-components@1.1.20) (2024-09-19)
+
+**Note:** Version bump only for package @ovh-ux/ng-ovh-pci-universe-components
+
+
+
+
+
+## [1.1.19](https://github.com/ovh/manager/compare/@ovh-ux/ng-ovh-pci-universe-components@1.1.18...@ovh-ux/ng-ovh-pci-universe-components@1.1.19) (2024-09-17)
+
+**Note:** Version bump only for package @ovh-ux/ng-ovh-pci-universe-components
+
+
+
+
+
+## [1.1.18](https://github.com/ovh/manager/compare/@ovh-ux/ng-ovh-pci-universe-components@1.1.17...@ovh-ux/ng-ovh-pci-universe-components@1.1.18) (2024-09-12)
+
+**Note:** Version bump only for package @ovh-ux/ng-ovh-pci-universe-components
+
+
+
+
+
 ## [1.1.17](https://github.com/ovh/manager/compare/@ovh-ux/ng-ovh-pci-universe-components@1.1.16...@ovh-ux/ng-ovh-pci-universe-components@1.1.17) (2024-07-18)
 
 **Note:** Version bump only for package @ovh-ux/ng-ovh-pci-universe-components

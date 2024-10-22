@@ -3,6 +3,340 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.84.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-container-app@0.84.0...@ovh-ux/manager-container-app@0.84.1) (2024-10-22)
+
+**Note:** Version bump only for package @ovh-ux/manager-container-app
+
+
+
+
+
+# [0.84.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-container-app@0.83.0...@ovh-ux/manager-container-app@0.84.0) (2024-10-21)
+
+
+### Features
+
+* **hpc-vmware-managed-vcd:** add new product VCD ([#12552](https://github.com/ovh/manager/issues/12552)) ([c990a65](https://github.com/ovh/manager/commit/c990a65189760c0b109902e3e292b31e8b59dd83))
+* **hycu:** add product HYCU for OVHCloud ([#13244](https://github.com/ovh/manager/issues/13244)) ([5ab27eb](https://github.com/ovh/manager/commit/5ab27eb9dbb9ba886dbb61e6dd4a1670c138100c))
+* **veeam-backup:** add new product veeam-backup ([#12611](https://github.com/ovh/manager/issues/12611)) ([df1cd33](https://github.com/ovh/manager/commit/df1cd3377a025e7a1cd4c166f26838d0871397c4))
+
+
+
+
+
+# [0.83.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-container-app@0.82.0...@ovh-ux/manager-container-app@0.83.0) (2024-10-21)
+
+
+### Bug Fixes
+
+* **container:** fix onboarding last step pop-up overflow ([#13671](https://github.com/ovh/manager/issues/13671)) ([2343d35](https://github.com/ovh/manager/commit/2343d357c6355e2aed1649918662e134603a938b))
+* **container:** fix the init load translations files ([#13486](https://github.com/ovh/manager/issues/13486)) ([de50080](https://github.com/ovh/manager/commit/de50080e68020eee117c6ba24dd715db44e48680))
+
+
+### Features
+
+* **container:** added space between both ctas in guided tour ([#13355](https://github.com/ovh/manager/issues/13355)) ([ff5f8c6](https://github.com/ovh/manager/commit/ff5f8c616547a23db63c203235321f5c7b917988))
+* **container:** keep lvl2 closed when manually closed ([#13279](https://github.com/ovh/manager/issues/13279)) ([144af7e](https://github.com/ovh/manager/commit/144af7e1aa4fde72f2db6027a5629be49a535e72))
+* **container:** ordered applications by hash for routing ([#13630](https://github.com/ovh/manager/issues/13630)) ([3a68215](https://github.com/ovh/manager/commit/3a682158ed70ac68881a1b8ac1932b0b55d7d6ba))
+
+
+
+
+
+# [0.82.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-container-app@0.81.1...@ovh-ux/manager-container-app@0.82.0) (2024-10-17)
+
+
+### Bug Fixes
+
+* **i18n:** add missing translations [CDS 3402] ([b007251](https://github.com/ovh/manager/commit/b007251ae796eb0ad9d1edbc2b588ce3a4a8b88f))
+
+
+### Features
+
+* **container:** updated user widget and support dynamic updates ([fb64b9e](https://github.com/ovh/manager/commit/fb64b9eca4c10c868e656eb62f286ae971746de3))
+
+
+
+
+
+## [0.81.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-container-app@0.81.0...@ovh-ux/manager-container-app@0.81.1) (2024-10-15)
+
+
+### Reverts
+
+* Revert "fix(manager-react-components): fix bump ods 18 issues" ([fb0e56d](https://github.com/ovh/manager/commit/fb0e56d4e7f64d0ebe8f6ae8036384403cd678b7))
+
+
+
+
+
+# [0.81.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-container-app@0.80.5...@ovh-ux/manager-container-app@0.81.0) (2024-10-14)
+
+
+### Features
+
+* **container:** rename "Zimbra" to "Zimbra Mail" ([#13438](https://github.com/ovh/manager/issues/13438)) ([6a1840a](https://github.com/ovh/manager/commit/6a1840a63a06e97c19a28ef69460475b71764937))
+
+
+
+
+
+## [0.80.5](https://github.com/ovh/manager/compare/@ovh-ux/manager-container-app@0.80.4...@ovh-ux/manager-container-app@0.80.5) (2024-10-11)
+
+
+### Bug Fixes
+
+* **manager-react-components:** fix bump ods 18 issues ([ea1dd83](https://github.com/ovh/manager/commit/ea1dd83d2b85d5a6ab5b0bbb91dbf6350286cde8))
+
+
+
+
+
+## [0.80.4](https://github.com/ovh/manager/compare/@ovh-ux/manager-container-app@0.80.3...@ovh-ux/manager-container-app@0.80.4) (2024-10-10)
+
+
+### Bug Fixes
+
+* **i18n:** add missing translations [CDS 3367] ([4948ec3](https://github.com/ovh/manager/commit/4948ec394b51e52df7310de27edd323c7237cd26))
+* **i18n:** add missing translations [CDS 3370] ([8de108f](https://github.com/ovh/manager/commit/8de108f9010ccf2ac06501a07537f94fbfb06020))
+* **i18n:** add missing translations [CDS 3376] ([5809574](https://github.com/ovh/manager/commit/5809574046d50e242bb02e165c1091270cf6683f))
+
+
+
+
+
+## [0.80.3](https://github.com/ovh/manager/compare/@ovh-ux/manager-container-app@0.80.2...@ovh-ux/manager-container-app@0.80.3) (2024-10-10)
+
+**Note:** Version bump only for package @ovh-ux/manager-container-app
+
+
+
+
+
+## [0.80.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-container-app@0.80.1...@ovh-ux/manager-container-app@0.80.2) (2024-10-09)
+
+
+### Bug Fixes
+
+* **container:** prevent subtree to be opened without selected node ([#13500](https://github.com/ovh/manager/issues/13500)) ([994b0ab](https://github.com/ovh/manager/commit/994b0ab9ca238b1eeb84766df37b2ac9e4b6d8b0))
+* **container:** remove w-full on the osds popover ([#13507](https://github.com/ovh/manager/issues/13507)) ([5182df5](https://github.com/ovh/manager/commit/5182df58bef10206d54b2a4ff0452d1986ad2084))
+* **container:** update cta link for iplb ([#13508](https://github.com/ovh/manager/issues/13508)) ([63469e2](https://github.com/ovh/manager/commit/63469e26dab426b183443157bcd632539dbd0c0a))
+
+
+
+
+
+## [0.80.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-container-app@0.80.0...@ovh-ux/manager-container-app@0.80.1) (2024-10-08)
+
+**Note:** Version bump only for package @ovh-ux/manager-container-app
+
+
+
+
+
+# [0.80.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-container-app@0.79.3...@ovh-ux/manager-container-app@0.80.0) (2024-10-07)
+
+
+### Bug Fixes
+
+* **container:** fix reset universe for containerContext ([#13413](https://github.com/ovh/manager/issues/13413)) ([5400401](https://github.com/ovh/manager/commit/54004016b15d07419e9ab576fb160133c3507cd7))
+* **public-cloud:** fix menu css ([#13281](https://github.com/ovh/manager/issues/13281)) ([9a75171](https://github.com/ovh/manager/commit/9a751712213b70fa8509f7e16a747975a740e012))
+
+
+### Features
+
+* **container:** onboarding with bff api ([#12816](https://github.com/ovh/manager/issues/12816)) ([e1b0830](https://github.com/ovh/manager/commit/e1b0830eb29ff2383f130ded19b29c8049d63980))
+
+
+
+
+
+## [0.79.3](https://github.com/ovh/manager/compare/@ovh-ux/manager-container-app@0.79.2...@ovh-ux/manager-container-app@0.79.3) (2024-10-04)
+
+**Note:** Version bump only for package @ovh-ux/manager-container-app
+
+
+
+
+
+## [0.79.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-container-app@0.79.1...@ovh-ux/manager-container-app@0.79.2) (2024-10-03)
+
+**Note:** Version bump only for package @ovh-ux/manager-container-app
+
+
+
+
+
+## [0.79.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-container-app@0.79.0...@ovh-ux/manager-container-app@0.79.1) (2024-10-03)
+
+**Note:** Version bump only for package @ovh-ux/manager-container-app
+
+
+
+
+
+# [0.79.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-container-app@0.78.0...@ovh-ux/manager-container-app@0.79.0) (2024-10-02)
+
+
+### Features
+
+* **pci.savings-plan:** savings plan ([#12172](https://github.com/ovh/manager/issues/12172)) ([6744853](https://github.com/ovh/manager/commit/67448534cdde94927ccab308e002b8894f966367))
+
+
+
+
+
+# [0.78.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-container-app@0.77.5...@ovh-ux/manager-container-app@0.78.0) (2024-09-30)
+
+
+### Bug Fixes
+
+* **container:** use-translation is missing on a key ([#13339](https://github.com/ovh/manager/issues/13339)) ([9b4f017](https://github.com/ovh/manager/commit/9b4f0176f16102f83ac3a23ecd9265d7324d33a6))
+* **exchange:** relocate exchange in webcloud for ca ([#11943](https://github.com/ovh/manager/issues/11943)) ([e7e4076](https://github.com/ovh/manager/commit/e7e407632457b47332384d77e599c4698a60f6f3))
+
+
+### Features
+
+* **container:** add resize hook and fix mobile ([#12921](https://github.com/ovh/manager/issues/12921)) ([0969728](https://github.com/ovh/manager/commit/09697281ca8a9cd5d6562e508cfbab4cec5b1cc0))
+* **container:** redirect help centre to correct links for us and eu/ca ([#12959](https://github.com/ovh/manager/issues/12959)) ([c3d936d](https://github.com/ovh/manager/commit/c3d936d3f0889a060a5488ffd75be29058156ecd))
+* **container:** updated icons pnrv2, useful links behavior in panel ([#13228](https://github.com/ovh/manager/issues/13228)) ([245fa3a](https://github.com/ovh/manager/commit/245fa3afb8cefb8e4f32a15bf4dad882fb4c9001))
+
+
+
+
+
+## [0.77.5](https://github.com/ovh/manager/compare/@ovh-ux/manager-container-app@0.77.4...@ovh-ux/manager-container-app@0.77.5) (2024-09-30)
+
+
+### Bug Fixes
+
+* **web:** remove order button for webpaas ([7c1466d](https://github.com/ovh/manager/commit/7c1466d6e580a9e9db4f674de63e69a856d90470))
+
+
+
+
+
+## [0.77.4](https://github.com/ovh/manager/compare/@ovh-ux/manager-container-app@0.77.3...@ovh-ux/manager-container-app@0.77.4) (2024-09-27)
+
+
+### Reverts
+
+* Revert "fix(container): fix reset universe for containerContext (#13189)" ([c58cf6e](https://github.com/ovh/manager/commit/c58cf6e883025130b7e852c01ca5f15c91f3291b)), closes [#13189](https://github.com/ovh/manager/issues/13189)
+
+
+
+
+
+## [0.77.3](https://github.com/ovh/manager/compare/@ovh-ux/manager-container-app@0.77.2...@ovh-ux/manager-container-app@0.77.3) (2024-09-27)
+
+
+### Bug Fixes
+
+* **container:** fix reset universe for containerContext ([#13189](https://github.com/ovh/manager/issues/13189)) ([d59b57d](https://github.com/ovh/manager/commit/d59b57d2e3935425647f9692cc856e5793546165))
+
+
+
+
+
+## [0.77.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-container-app@0.77.1...@ovh-ux/manager-container-app@0.77.2) (2024-09-26)
+
+**Note:** Version bump only for package @ovh-ux/manager-container-app
+
+
+
+
+
+## [0.77.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-container-app@0.77.0...@ovh-ux/manager-container-app@0.77.1) (2024-09-26)
+
+**Note:** Version bump only for package @ovh-ux/manager-container-app
+
+
+
+
+
+# [0.77.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-container-app@0.76.3...@ovh-ux/manager-container-app@0.77.0) (2024-09-23)
+
+
+### Features
+
+* **key-management-service:** add services loader in sidebar ([#13040](https://github.com/ovh/manager/issues/13040)) ([7b79460](https://github.com/ovh/manager/commit/7b79460a5940d4a9a07b79c41c3d0c853f1ff197))
+* **key-management-service:** update PCI menu to manage external µapp ([#13028](https://github.com/ovh/manager/issues/13028)) ([0156c6e](https://github.com/ovh/manager/commit/0156c6ebf4212772103e1278d4506aec039ce21b))
+
+
+
+
+
+## [0.76.3](https://github.com/ovh/manager/compare/@ovh-ux/manager-container-app@0.76.2...@ovh-ux/manager-container-app@0.76.3) (2024-09-23)
+
+
+### Bug Fixes
+
+* **pci-private-network:** replace Network instead of network ([#12892](https://github.com/ovh/manager/issues/12892)) ([2c2a74e](https://github.com/ovh/manager/commit/2c2a74e9a313ff46d2510286a63b747502432ca2))
+
+
+
+
+
+## [0.76.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-container-app@0.76.1...@ovh-ux/manager-container-app@0.76.2) (2024-09-19)
+
+**Note:** Version bump only for package @ovh-ux/manager-container-app
+
+
+
+
+
+## [0.76.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-container-app@0.76.0...@ovh-ux/manager-container-app@0.76.1) (2024-09-18)
+
+**Note:** Version bump only for package @ovh-ux/manager-container-app
+
+
+
+
+
+# [0.76.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-container-app@0.75.2...@ovh-ux/manager-container-app@0.76.0) (2024-09-16)
+
+
+### Features
+
+* **container:** removed old feedback button and logo for mobile ([#12942](https://github.com/ovh/manager/issues/12942)) ([31b22db](https://github.com/ovh/manager/commit/31b22db39961b611115c3c62707b99d6c010253d))
+
+
+
+
+
+## [0.75.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-container-app@0.75.1...@ovh-ux/manager-container-app@0.75.2) (2024-09-12)
+
+
+### Bug Fixes
+
+* **i18n:** add missing translations [CDS 3286] ([c27f0cb](https://github.com/ovh/manager/commit/c27f0cb0716bb64cc9ce958f11df26894d95cd7c))
+
+
+
+
+
+## [0.75.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-container-app@0.75.0...@ovh-ux/manager-container-app@0.75.1) (2024-09-12)
+
+
+### Bug Fixes
+
+* add translation deleted after release ([#13030](https://github.com/ovh/manager/issues/13030)) ([1bad9f6](https://github.com/ovh/manager/commit/1bad9f6e0dffb35f9b3a85476236a0545cca127e))
+
+
+
+
+
+# [0.75.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-container-app@0.74.0...@ovh-ux/manager-container-app@0.75.0) (2024-09-11)
+
+
+### Features
+
+* rancher GA launch ([#12618](https://github.com/ovh/manager/issues/12618)) ([#13037](https://github.com/ovh/manager/issues/13037)) ([8f49801](https://github.com/ovh/manager/commit/8f49801555fc956d053a8bbf9fd666ff5b76b103))
+
+
+
+
+
 # [0.74.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-container-app@0.73.1...@ovh-ux/manager-container-app@0.74.0) (2024-09-09)
 
 

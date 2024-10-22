@@ -364,23 +364,6 @@ export default function DedicatedSidebar() {
       });
     }
 
-    if (feature['exchange:dedicated-dashboard']) {
-      menu.push({
-        id: 'exchange',
-        label: t('sidebar_microsoft_exchange'),
-        icon: getIcon('ms-Icon ms-Icon--ExchangeLogo'),
-        routeMatcher: new RegExp('/exchange'),
-        async loader() {
-          const services = await loadServices('/email/exchange');
-          return services.map((service) => ({
-            ...service,
-            icon: getIcon('ms-Icon ms-Icon--ExchangeLogo'),
-            routeMatcher: new RegExp(`/exchange/${service.serviceName}`),
-          }));
-        },
-      });
-    }
-
     if (feature.license) {
       menu.push({
         id: 'dedicated-licences',
@@ -392,6 +375,7 @@ export default function DedicatedSidebar() {
     }
 
     if (feature['key-management-service']) {
+      const keyIcon = <OsdsIcon name={ODS_ICON_NAME.KEY_CONCEPT} size={ODS_ICON_SIZE.xxs} color={ODS_THEME_COLOR_INTENT.text}/>
       menu.push({
         id: 'identity-security-operations',
         label: t('sidebar_identity_security_operations'),
@@ -405,7 +389,27 @@ export default function DedicatedSidebar() {
             href: navigation.getURL('key-management-service', '/'),
             badge: 'beta',
             pathMatcher: new RegExp('^/key-management-service'),
-            icon: <OsdsIcon name={ODS_ICON_NAME.KEY_CONCEPT} size={ODS_ICON_SIZE.xxs} color={ODS_THEME_COLOR_INTENT.text}/>
+            icon: keyIcon,
+            async loader() {
+              const app = 'key-management-service';
+              const services = await loadServices('/okms/resource', undefined, app);
+
+              return [
+                {
+                  id: 'key-management-service-all',
+                  label: t('sidebar_service_all'),
+                  href: navigation.getURL(app, '/'),
+                  ignoreSearch: true,
+                  icon: keyIcon,
+                },
+                ...services.map((service) => ({
+                  ...service,
+                  pathMatcher: new RegExp(
+                    `^/key-management-service/${service.serviceName}`,
+                  ),
+                })),
+              ];
+            },
           },
         ],
       });

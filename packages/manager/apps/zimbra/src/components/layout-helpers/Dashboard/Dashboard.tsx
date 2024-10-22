@@ -1,4 +1,4 @@
-import React /* useContext */ from 'react';
+import React, { useContext } from 'react';
 import {
   Outlet,
   useResolvedPath,
@@ -7,30 +7,31 @@ import {
 } from 'react-router-dom';
 
 import {
-  DashboardLayout,
-  /*  GuideButton,
-  GuideItem, */
+  BaseLayout,
+  GuideButton,
+  GuideItem,
 } from '@ovh-ux/manager-react-components';
 
-// import { OdsHTMLAnchorElementTarget } from '@ovhcloud/ods-common-core';
+import { OdsHTMLAnchorElementTarget } from '@ovhcloud/ods-common-core';
 import { useTranslation } from 'react-i18next';
 import { ShellContext } from '@ovh-ux/manager-react-shell-client';
 import TabsPanel, { TabItemProps } from './TabsPanel';
 import Breadcrumb from '@/components/Breadcrumb/Breadcrumb';
-// import { GUIDES_LIST } from '@/guides.constants';
+import { GUIDES_LIST } from '@/guides.constants';
 import { urls } from '@/routes/routes.constants';
 
 import './Dashboard.scss';
+import { FEATURE_FLAGS } from '@/utils';
 
 export const Dashboard: React.FC = () => {
   const { platformId } = useParams();
   const { t } = useTranslation('dashboard');
-  // const context = useContext(ShellContext);
-  // const { ovhSubsidiary } = context.environment.getUser();
+  const context = useContext(ShellContext);
+  const { ovhSubsidiary } = context.environment.getUser();
   const location = useLocation();
   const basePath = useResolvedPath('').pathname;
 
-  /* const guideItems: GuideItem[] = [
+  const guideItems: GuideItem[] = [
     {
       id: 1,
       href: `${GUIDES_LIST.administrator_guide.url[ovhSubsidiary] ||
@@ -38,7 +39,7 @@ export const Dashboard: React.FC = () => {
       target: OdsHTMLAnchorElementTarget._blank,
       label: t('zimbra_dashboard_administrator_guide'),
     },
-  ]; */
+  ];
 
   const params = new URLSearchParams(location.search);
   const selectedOrganizationId = params.get('organizationId');
@@ -68,7 +69,12 @@ export const Dashboard: React.FC = () => {
       name: 'domains',
       title: t('zimbra_dashboard_domains'),
       to: `${basePath}/domains`,
-      pathMatchers: computePathMatchers([urls.domains]),
+      pathMatchers: computePathMatchers([
+        urls.domains,
+        urls.domainsEdit,
+        urls.domainsDelete,
+        urls.domains_diagnostic,
+      ]),
     },
     {
       name: 'email_accounts',
@@ -76,18 +82,47 @@ export const Dashboard: React.FC = () => {
       to: `${basePath}/email_accounts`,
       pathMatchers: computePathMatchers([urls.email_accounts]),
     },
+    {
+      name: 'mailing_lists',
+      title: t('zimbra_dashboard_mailing_lists'),
+      to: `${basePath}/mailing_lists`,
+      pathMatchers: computePathMatchers([
+        urls.mailing_lists,
+        urls.mailing_lists_delete,
+      ]),
+      hidden: !FEATURE_FLAGS.MAILINGLISTS,
+    },
+    {
+      name: 'redirections',
+      title: t('zimbra_dashboard_redirections'),
+      to: `${basePath}/redirections`,
+      pathMatchers: computePathMatchers([
+        urls.redirections,
+        urls.redirections_delete,
+        urls.redirections_edit,
+      ]),
+      hidden: !FEATURE_FLAGS.REDIRECTIONS,
+    },
+    {
+      name: 'auto_replies',
+      title: t('zimbra_dashboard_auto_replies'),
+      to: `${basePath}/auto_replies`,
+      pathMatchers: computePathMatchers([urls.auto_replies]),
+      hidden: !FEATURE_FLAGS.AUTOREPLIES,
+    },
   ];
 
   return (
-    <DashboardLayout
+    <BaseLayout
       breadcrumb={<Breadcrumb />}
       header={{
         title: 'Zimbra',
-        // headerButton: <GuideButton items={guideItems} />,
+        headerButton: <GuideButton items={guideItems} />,
       }}
       tabs={<TabsPanel tabs={tabsList} />}
-      content={<Outlet />}
-    />
+    >
+      <Outlet />
+    </BaseLayout>
   );
 };
 

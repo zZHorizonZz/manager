@@ -32,11 +32,7 @@ export type OnboardingLayoutProps = OnboardingLayoutButtonProps &
     hideHeadingSection?: boolean;
     title: string;
     description?: React.ReactNode;
-    img?: {
-      src: string;
-      width?: number;
-      height?: number;
-    };
+    img?: React.ComponentProps<'img'>;
   }>;
 
 const OnboardingLayoutButton: React.FC<OnboardingLayoutButtonProps> = ({
@@ -53,15 +49,18 @@ const OnboardingLayoutButton: React.FC<OnboardingLayoutButtonProps> = ({
   }
   return (
     <div className="flex sm:pt-8 xs:pt-2.5 flex-row items-center space-x-4 justify-center">
-      <OsdsButton
-        inline
-        color={ODS_THEME_COLOR_INTENT.primary}
-        size={ODS_BUTTON_SIZE.md}
-        href={orderHref}
-        onClick={onOrderButtonClick}
-      >
-        {orderButtonLabel}
-      </OsdsButton>
+      {orderButtonLabel && (
+        <OsdsButton
+          inline
+          color={ODS_THEME_COLOR_INTENT.primary}
+          size={ODS_BUTTON_SIZE.md}
+          href={orderHref}
+          onClick={onOrderButtonClick}
+          disabled={(!onOrderButtonClick && !orderHref) || undefined}
+        >
+          {orderButtonLabel}
+        </OsdsButton>
+      )}
 
       {moreInfoButtonLabel && moreInfoHref && (
         <OsdsButton
@@ -100,24 +99,19 @@ export const OnboardingLayout: React.FC<OnboardingLayoutProps> = ({
   children,
   onOrderButtonClick,
   onmoreInfoButtonClick,
-  img,
+  img = {},
   isActionDisabled,
 }) => {
+  const { className: imgClassName, ...imgProps } = img;
   return (
     <div className="flex flex-col mx-auto sm:px-10">
       {!hideHeadingSection && (
-        <section className="flex flex-col items-center">
-          {(img?.src || placeholderSrc) && (
-            <div className="flex justify-center pt-8 max-h-28">
-              <img
-                className="max-h-[150px]"
-                src={img?.src ?? placeholderSrc}
-                alt=""
-                width={img?.width}
-                height={img?.height}
-              />
-            </div>
-          )}
+        <section className="flex flex-col items-center mt-8">
+          <img
+            className={`max-h-28 ${imgClassName ?? ''}`}
+            src={placeholderSrc}
+            {...imgProps}
+          />
           <OsdsText
             color={ODS_THEME_COLOR_INTENT.primary}
             level={ODS_TEXT_LEVEL.heading}

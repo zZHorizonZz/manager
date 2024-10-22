@@ -3,6 +3,94 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.17.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-iplb@1.17.0...@ovh-ux/manager-iplb@1.17.1) (2024-10-21)
+
+
+### Bug Fixes
+
+* **iplb:** update link to guides without redirect ([#13594](https://github.com/ovh/manager/issues/13594)) ([52d281b](https://github.com/ovh/manager/commit/52d281b4bb3c86ef7937ff7657b516444fcf5a4a))
+
+
+
+
+
+# [1.17.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-iplb@1.16.0...@ovh-ux/manager-iplb@1.17.0) (2024-10-14)
+
+
+### Features
+
+* **dedicated.iplb:** modify the status display value ([#13457](https://github.com/ovh/manager/issues/13457)) ([0a7dbbd](https://github.com/ovh/manager/commit/0a7dbbd6e5576cc1d2fbbf6143ae3486fb13d556))
+
+
+
+
+
+# [1.16.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-iplb@1.15.0...@ovh-ux/manager-iplb@1.16.0) (2024-10-07)
+
+
+### Features
+
+* **dedicated:** add iplb cta link for us region ([#13417](https://github.com/ovh/manager/issues/13417)) ([4d253d6](https://github.com/ovh/manager/commit/4d253d606b25cfe2618cb37aa1052efe50412073))
+
+
+
+
+
+# [1.15.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-iplb@1.14.2...@ovh-ux/manager-iplb@1.15.0) (2024-09-30)
+
+
+### Bug Fixes
+
+* **dedicated:** hide upd protocol when add server cluster on US ([#13246](https://github.com/ovh/manager/issues/13246)) ([7f9d066](https://github.com/ovh/manager/commit/7f9d066313c8498c72594570fa1bf9129dcc2d2a))
+
+
+### Features
+
+* **dedicated:** add iplb cta for us region ([#12829](https://github.com/ovh/manager/issues/12829)) ([093f9ba](https://github.com/ovh/manager/commit/093f9ba8cce5eed36cdc8c9d5522db34bb8cc4a6))
+
+
+### Reverts
+
+* **dedicated:** add iplb cta for us region ([#13324](https://github.com/ovh/manager/issues/13324)) ([cb5c7ee](https://github.com/ovh/manager/commit/cb5c7ee29738628cd5f1c73b293a9715befc80ea))
+
+
+
+
+
+## [1.14.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-iplb@1.14.1...@ovh-ux/manager-iplb@1.14.2) (2024-09-25)
+
+
+### Bug Fixes
+
+* **iplb:** fix frontends edit controller ([#13259](https://github.com/ovh/manager/issues/13259)) ([c1fbe40](https://github.com/ovh/manager/commit/c1fbe4047f134c390bdb034e3e9ca9e10dec19be))
+
+
+
+
+
+## [1.14.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-iplb@1.14.0...@ovh-ux/manager-iplb@1.14.1) (2024-09-24)
+
+
+### Bug Fixes
+
+* **dedicated:** add featureAvailibility to upd protocol on lb frontend ([#13187](https://github.com/ovh/manager/issues/13187)) ([14e478e](https://github.com/ovh/manager/commit/14e478e7d374cf49edc83bd295b41f0a5220c734))
+* **dedicated:** fix featureAvailibility flag name ([#13214](https://github.com/ovh/manager/issues/13214)) ([6df400b](https://github.com/ovh/manager/commit/6df400b30f0d9738ac07db410308a677835b1074))
+
+
+
+
+
+# [1.14.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-iplb@1.13.2...@ovh-ux/manager-iplb@1.14.0) (2024-09-12)
+
+
+### Features
+
+* **iplb:** move metrics to mimir ([#12483](https://github.com/ovh/manager/issues/12483)) ([1847b8f](https://github.com/ovh/manager/commit/1847b8f570abc6d479fe352cc3a15c09f88bc822))
+
+
+
+
+
 ## [1.13.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-iplb@1.13.1...@ovh-ux/manager-iplb@1.13.2) (2024-08-29)
 
 

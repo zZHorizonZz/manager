@@ -3,6 +3,55 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.10.0](https://github.com/ovh/manager/compare/@ovh-ux/shell@3.9.1...@ovh-ux/shell@3.10.0) (2024-10-22)
+
+
+### Features
+
+* **pci:** add mix commander tag at projet creation & activation ([#13436](https://github.com/ovh/manager/issues/13436)) ([414712c](https://github.com/ovh/manager/commit/414712cfff26d6b846a603700dd723fe9568523b))
+
+
+
+
+
+## [3.9.1](https://github.com/ovh/manager/compare/@ovh-ux/shell@3.9.0...@ovh-ux/shell@3.9.1) (2024-10-21)
+
+**Note:** Version bump only for package @ovh-ux/shell
+
+
+
+
+
+# [3.9.0](https://github.com/ovh/manager/compare/@ovh-ux/shell@3.8.0...@ovh-ux/shell@3.9.0) (2024-10-17)
+
+
+### Features
+
+* **container:** updated user widget and support dynamic updates ([fb64b9e](https://github.com/ovh/manager/commit/fb64b9eca4c10c868e656eb62f286ae971746de3))
+
+
+
+
+
+# [3.8.0](https://github.com/ovh/manager/compare/@ovh-ux/shell@3.7.1...@ovh-ux/shell@3.8.0) (2024-10-03)
+
+
+### Features
+
+* updated tracking functions declaration ([#13386](https://github.com/ovh/manager/issues/13386)) ([ffd35b6](https://github.com/ovh/manager/commit/ffd35b64cde87a96390fb551fff9c9a233ab7543))
+
+
+
+
+
+## [3.7.1](https://github.com/ovh/manager/compare/@ovh-ux/shell@3.7.0...@ovh-ux/shell@3.7.1) (2024-09-26)
+
+**Note:** Version bump only for package @ovh-ux/shell
+
+
+
+
+
 # [3.7.0](https://github.com/ovh/manager/compare/@ovh-ux/shell@3.6.1...@ovh-ux/shell@3.7.0) (2024-08-08)
 
 

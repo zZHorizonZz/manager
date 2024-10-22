@@ -3,6 +3,70 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.3.23](https://github.com/ovh/manager/compare/@ovh-ux/manager-overthebox-app@6.3.22...@ovh-ux/manager-overthebox-app@6.3.23) (2024-10-22)
+
+**Note:** Version bump only for package @ovh-ux/manager-overthebox-app
+
+
+
+
+
+## [6.3.22](https://github.com/ovh/manager/compare/@ovh-ux/manager-overthebox-app@6.3.21...@ovh-ux/manager-overthebox-app@6.3.22) (2024-10-21)
+
+**Note:** Version bump only for package @ovh-ux/manager-overthebox-app
+
+
+
+
+
+## [6.3.21](https://github.com/ovh/manager/compare/@ovh-ux/manager-overthebox-app@6.3.20...@ovh-ux/manager-overthebox-app@6.3.21) (2024-10-17)
+
+**Note:** Version bump only for package @ovh-ux/manager-overthebox-app
+
+
+
+
+
+## [6.3.20](https://github.com/ovh/manager/compare/@ovh-ux/manager-overthebox-app@6.3.19...@ovh-ux/manager-overthebox-app@6.3.20) (2024-10-10)
+
+**Note:** Version bump only for package @ovh-ux/manager-overthebox-app
+
+
+
+
+
+## [6.3.19](https://github.com/ovh/manager/compare/@ovh-ux/manager-overthebox-app@6.3.18...@ovh-ux/manager-overthebox-app@6.3.19) (2024-10-07)
+
+**Note:** Version bump only for package @ovh-ux/manager-overthebox-app
+
+
+
+
+
+## [6.3.18](https://github.com/ovh/manager/compare/@ovh-ux/manager-overthebox-app@6.3.17...@ovh-ux/manager-overthebox-app@6.3.18) (2024-10-03)
+
+**Note:** Version bump only for package @ovh-ux/manager-overthebox-app
+
+
+
+
+
+## [6.3.17](https://github.com/ovh/manager/compare/@ovh-ux/manager-overthebox-app@6.3.16...@ovh-ux/manager-overthebox-app@6.3.17) (2024-09-26)
+
+**Note:** Version bump only for package @ovh-ux/manager-overthebox-app
+
+
+
+
+
+## [6.3.16](https://github.com/ovh/manager/compare/@ovh-ux/manager-overthebox-app@6.3.15...@ovh-ux/manager-overthebox-app@6.3.16) (2024-09-12)
+
+**Note:** Version bump only for package @ovh-ux/manager-overthebox-app
+
+
+
+
+
 ## [6.3.15](https://github.com/ovh/manager/compare/@ovh-ux/manager-overthebox-app@6.3.14...@ovh-ux/manager-overthebox-app@6.3.15) (2024-09-03)
 
 **Note:** Version bump only for package @ovh-ux/manager-overthebox-app

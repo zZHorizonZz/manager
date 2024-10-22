@@ -1,35 +1,23 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { TCatalog } from '@ovh-ux/manager-pci-common';
 import { useCloudCatalog } from '@/api/hooks/cloud-catalog';
 import { useAvailableGatewayPlans } from '@/api/hooks/gateway-plans';
-import { TCloudCatalogResponse } from '@/api/data/cloud-catalog';
 import { TAvailableGatewayPlansResponse } from '@/api/data/gateway-plans';
 import { useInactiveRegions } from '@/api/hooks/useInactiveRegions';
 
 const getMacroRegion = (region: string) => {
-  const localZonePattern = /^lz/i;
-  let macro: RegExpExecArray;
-  if (
-    localZonePattern.test(
-      region
-        .split('-')
-        ?.slice(2)
-        ?.join('-'),
-    )
-  ) {
-    // The pattern for local zone is <geo_location>-LZ-<datacenter>-<letter>
-    // geo_location is EU-WEST, EU-SOUTH, maybe ASIA-WEST in the future
-    // datacenter: MAD, BRU
-    macro = /\D{2,3}/.exec(
-      region
-        .split('-')
-        ?.slice(3)
-        ?.join('-'),
-    );
-  } else {
-    macro = /\D{2,3}/.exec(region);
-  }
-  return macro ? macro[0].replace('-', '').toUpperCase() : '';
+  const regionSubStrings = region.split('-');
+
+  const macroRegionMap = [
+    null,
+    regionSubStrings[0].split(/(\d)/)[0],
+    regionSubStrings[0],
+    regionSubStrings[2],
+    regionSubStrings[2] === 'LZ' ? regionSubStrings[3] : regionSubStrings[2],
+    regionSubStrings[3],
+  ];
+  return macroRegionMap[regionSubStrings.length] || 'Unknown_Macro_Region';
 };
 
 const getLitteralProductSize = (productName: string): string => {
@@ -120,11 +108,11 @@ export const useData = (projectId: string) => {
             name: string;
             hourly?: {
               plan: TAvailableGatewayPlansResponse['plans'][0];
-              addon: TCloudCatalogResponse['addons'][0];
+              addon: TCatalog['addons'][0];
             };
             monthly?: {
               plan: TAvailableGatewayPlansResponse['plans'][0];
-              addon: TCloudCatalogResponse['addons'][0];
+              addon: TCatalog['addons'][0];
             };
           }[],
         )

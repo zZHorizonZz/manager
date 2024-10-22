@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.9.2](https://github.com/ovh/manager/compare/@ovh-ux/sign-up-app@3.9.1...@ovh-ux/sign-up-app@3.9.2) (2024-10-22)
+
+**Note:** Version bump only for package @ovh-ux/sign-up-app
+
+
+
+
+
+## [3.9.1](https://github.com/ovh/manager/compare/@ovh-ux/sign-up-app@3.9.0...@ovh-ux/sign-up-app@3.9.1) (2024-10-21)
+
+**Note:** Version bump only for package @ovh-ux/sign-up-app
+
+
+
+
+
+# [3.9.0](https://github.com/ovh/manager/compare/@ovh-ux/sign-up-app@3.8.6...@ovh-ux/sign-up-app@3.9.0) (2024-10-21)
+
+
+### Features
+
+* **sign-up:** added asterisks to indicate mandatory fields ([#12711](https://github.com/ovh/manager/issues/12711)) ([ef4e323](https://github.com/ovh/manager/commit/ef4e32333ec5541521dc64cbd8ed77fdaa3886cb))
+
+
+
+
+
+## [3.8.6](https://github.com/ovh/manager/compare/@ovh-ux/sign-up-app@3.8.5...@ovh-ux/sign-up-app@3.8.6) (2024-10-03)
+
+**Note:** Version bump only for package @ovh-ux/sign-up-app
+
+
+
+
+
+## [3.8.5](https://github.com/ovh/manager/compare/@ovh-ux/sign-up-app@3.8.4...@ovh-ux/sign-up-app@3.8.5) (2024-09-26)
+
+**Note:** Version bump only for package @ovh-ux/sign-up-app
+
+
+
+
+
 ## [3.8.4](https://github.com/ovh/manager/compare/@ovh-ux/sign-up-app@3.8.3...@ovh-ux/sign-up-app@3.8.4) (2024-08-29)
 
 

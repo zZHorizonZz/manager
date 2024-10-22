@@ -3,6 +3,7 @@
   "zimbra_account_datagrid_organization_label": "Organisation",
   "zimbra_account_datagrid_offer_label": "Offre",
   "zimbra_account_datagrid_webmail_label": "Webmail :",
+  "zimbra_account_datagrid_status_label": "Informations",
   "zimbra_account_datagrid_quota": "Taille",
   "zimbra_account_datagrid_quota_octets": "Octets",
   "zimbra_account_datagrid_quota_ko": "Ko",
@@ -11,5 +12,6 @@
   "zimbra_account_datagrid_quota_to": "To",
   "zimbra_account_datagrid_tooltip_modification": "Modifier",
   "zimbra_account_datagrid_tooltip_delete": "Supprimer",
-  "zimbra_account_account_add": "Créer un compte"
+  "zimbra_account_account_add": "Créer un compte",
+  "zimbra_domains_tooltip_need_domain": "Veuillez d'abord configurer un domaine"
 }

@@ -3,6 +3,87 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.22.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-components@1.21.0...@ovh-ux/manager-components@1.22.0) (2024-10-21)
+
+
+### Features
+
+* **manager-components:** add sshKey component ([#12994](https://github.com/ovh/manager/issues/12994)) ([2a9c014](https://github.com/ovh/manager/commit/2a9c014188cbb6911f903eba28a9600b028f311a))
+
+
+
+
+
+# [1.21.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-components@1.20.1...@ovh-ux/manager-components@1.21.0) (2024-10-08)
+
+
+### Features
+
+* **pci-object-storage:** storage 3az ([1ed7551](https://github.com/ovh/manager/commit/1ed7551152ad155fd43484bca27217ae9cf80540))
+
+
+
+
+
+## [1.20.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-components@1.20.0...@ovh-ux/manager-components@1.20.1) (2024-10-03)
+
+
+### Bug Fixes
+
+* **i18n:** add missing translations [CDS 3364] ([e032ee5](https://github.com/ovh/manager/commit/e032ee53d3c3b79b8322927f59904223b8c37f71))
+
+
+
+
+
+# [1.20.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-components@1.19.6...@ovh-ux/manager-components@1.20.0) (2024-09-26)
+
+
+### Bug Fixes
+
+* **i18n:** add missing translations [CDS 3323] ([b3c3659](https://github.com/ovh/manager/commit/b3c365965b4a4b5b50be45d806927382f4c1867c))
+
+
+### Features
+
+* **pci.project:** display correctly the new MUM location ([#12966](https://github.com/ovh/manager/issues/12966)) ([234edc4](https://github.com/ovh/manager/commit/234edc42841ad77db40047b9489eff3fdbba9f8a))
+
+
+
+
+
+## [1.19.6](https://github.com/ovh/manager/compare/@ovh-ux/manager-components@1.19.5...@ovh-ux/manager-components@1.19.6) (2024-09-19)
+
+
+### Bug Fixes
+
+* **i18n:** add missing translations [CDS 3298] ([9c3e830](https://github.com/ovh/manager/commit/9c3e83054a32f5da5975822d1acbb4b7d5dd546e))
+* **i18n:** add missing translations [CDS 3305] ([0cd03cc](https://github.com/ovh/manager/commit/0cd03cc53169d952221a42ceffb6db331d16feec))
+* **i18n:** add missing translations [CDS 3318] ([d595e88](https://github.com/ovh/manager/commit/d595e88818b82eb8ee75526d7811fadc026ba7ad))
+
+
+
+
+
+## [1.19.5](https://github.com/ovh/manager/compare/@ovh-ux/manager-components@1.19.4...@ovh-ux/manager-components@1.19.5) (2024-09-17)
+
+
+### Bug Fixes
+
+* **dedicated:** add Mumbai flag and translation ([#13096](https://github.com/ovh/manager/issues/13096)) ([443367f](https://github.com/ovh/manager/commit/443367f787e077ebd8451695e32a8396572efaad))
+
+
+
+
+
+## [1.19.4](https://github.com/ovh/manager/compare/@ovh-ux/manager-components@1.19.3...@ovh-ux/manager-components@1.19.4) (2024-09-12)
+
+**Note:** Version bump only for package @ovh-ux/manager-components
+
+
+
+
+
 ## [1.19.3](https://github.com/ovh/manager/compare/@ovh-ux/manager-components@1.19.2...@ovh-ux/manager-components@1.19.3) (2024-07-18)
 
 

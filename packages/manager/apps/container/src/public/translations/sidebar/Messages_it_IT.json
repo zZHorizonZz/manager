@@ -194,5 +194,16 @@
   "sidebar_back_menu": "Torna al menu",
   "sidebar_identity_security_operations": "Identità, Sicurezza &amp; Operazioni",
   "sidebar_key-management-service": "Key Management Service",
-  "sidebar_zimbra": "Zimbra"
+  "sidebar_zimbra": "Zimbra Mail",
+  "sidebar_pci_ai_dashboard": "AI Dashboard",
+  "sidebar_security_operations": "Operazioni",
+  "sidebar_security_identity": "Identità e sicurezza",
+  "sidebar_reduce": "Riduci",
+  "sidebar_pci_savings_plan": "Savings Plan",
+  "sidebar_hycu": "HYCU",
+  "sidebar_all_hycu": "Tutte le mie licenze",
+  "sidebar_veeam_backup": "Managed Veeam for VCD",
+  "sidebar_all_veeam_backup": "Tutti i servizi",
+  "sidebar_vmware_vsphere": "Managed VMware vSphere",
+  "sidebar_vmware_vcd": "Managed VCD"
 }

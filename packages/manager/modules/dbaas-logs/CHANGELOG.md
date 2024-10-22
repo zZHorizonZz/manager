@@ -3,6 +3,72 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.26.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-dbaas-logs@1.26.1...@ovh-ux/manager-dbaas-logs@1.26.2) (2024-10-17)
+
+
+### Bug Fixes
+
+* **i18n:** add missing translations [CDS 3392] ([d623f03](https://github.com/ovh/manager/commit/d623f032e4277f1a4cf453f945bed127d2d33449))
+
+
+
+
+
+## [1.26.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-dbaas-logs@1.26.0...@ovh-ux/manager-dbaas-logs@1.26.1) (2024-10-10)
+
+
+### Bug Fixes
+
+* **i18n:** add missing translations [CDS 3367] ([4948ec3](https://github.com/ovh/manager/commit/4948ec394b51e52df7310de27edd323c7237cd26))
+
+
+
+
+
+# [1.26.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-dbaas-logs@1.25.0...@ovh-ux/manager-dbaas-logs@1.26.0) (2024-10-07)
+
+
+### Features
+
+* **dedicated.ldp:** add region us note ([#12950](https://github.com/ovh/manager/issues/12950)) ([5f5e2f9](https://github.com/ovh/manager/commit/5f5e2f91c27a8362697094366f8576de6c78648e))
+
+
+
+
+
+# [1.25.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-dbaas-logs@1.24.1...@ovh-ux/manager-dbaas-logs@1.25.0) (2024-09-30)
+
+
+### Features
+
+* **dedicated.ldp:** add kind in subscription datagrid ([#13010](https://github.com/ovh/manager/issues/13010)) ([8e20f6c](https://github.com/ovh/manager/commit/8e20f6c63c554d1009c3bfb4798a3a12e5ba39f5))
+
+
+
+
+
+## [1.24.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-dbaas-logs@1.24.0...@ovh-ux/manager-dbaas-logs@1.24.1) (2024-09-26)
+
+
+### Bug Fixes
+
+* remove unused translations [CDS] ([cf0c4b9](https://github.com/ovh/manager/commit/cf0c4b9db4e4d6d3e1cb4f1614ca77981ceb57b3))
+
+
+
+
+
+# [1.24.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-dbaas-logs@1.23.1...@ovh-ux/manager-dbaas-logs@1.24.0) (2024-09-17)
+
+
+### Features
+
+* **dedicated.ldp:** deactivation message display ([dcab08f](https://github.com/ovh/manager/commit/dcab08f39f0729a56ae39bdbcf5926a3c50e519a))
+
+
+
+
+
 ## [1.23.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-dbaas-logs@1.23.0...@ovh-ux/manager-dbaas-logs@1.23.1) (2024-08-19)
 
 **Note:** Version bump only for package @ovh-ux/manager-dbaas-logs

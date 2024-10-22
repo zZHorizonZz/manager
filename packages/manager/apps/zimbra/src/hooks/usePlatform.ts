@@ -5,17 +5,18 @@ import {
 } from '@/api/platform';
 
 export const usePlatform = () => {
-  const { data, isLoading, isError, error } = useQuery({
+  const { data, isLoading, isError, error, ...rest } = useQuery({
     queryKey: [getZimbraPlatformListQueryKey],
     queryFn: () => getZimbraPlatformList(),
   });
 
   return {
+    ...rest,
     isLoading,
     isError,
     error,
-    platformId: data ? data[0].id : undefined,
-    platformUrn: data ? data[0].iam.urn : undefined,
-    data: data ? data[0] : null,
+    platformId: data?.length > 0 ? data[0].id : undefined,
+    platformUrn: data?.length > 0 ? data[0].iam.urn : undefined,
+    data: data?.length > 0 ? data[0] : null,
   };
 };

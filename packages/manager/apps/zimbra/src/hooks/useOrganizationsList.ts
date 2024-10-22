@@ -1,23 +1,39 @@
-import { useQuery } from '@tanstack/react-query';
+import {
+  useInfiniteQuery,
+  UseInfiniteQueryOptions,
+  UseInfiniteQueryResult,
+} from '@tanstack/react-query';
 import { usePlatform } from '@/hooks';
 import {
   getZimbraPlatformOrganization,
   getZimbraPlatformOrganizationQueryKey,
+  OrganizationType,
 } from '@/api/organization';
 
-export const useOrganizationList = () => {
+export const useOrganizationList = (
+  options: Omit<
+    UseInfiniteQueryOptions,
+    'queryKey' | 'queryFn' | 'select' | 'getNextPageParam' | 'initialPageParam'
+  > = {},
+) => {
   const { platformId } = usePlatform();
 
-  const { data, isLoading, isError, error } = useQuery({
+  return useInfiniteQuery({
+    ...options,
+    initialPageParam: null,
     queryKey: getZimbraPlatformOrganizationQueryKey(platformId),
-    queryFn: () => getZimbraPlatformOrganization(platformId),
-    enabled: !!platformId,
+    queryFn: ({ pageParam }) =>
+      getZimbraPlatformOrganization({ platformId, pageParam }),
+    enabled: (query) =>
+      (typeof options.enabled === 'function'
+        ? options.enabled(query)
+        : typeof options.enabled !== 'boolean' || options.enabled) &&
+      !!platformId,
+    getNextPageParam: (lastPage: { cursorNext?: string }) =>
+      lastPage.cursorNext,
+    select: (data) =>
+      data?.pages.flatMap(
+        (page: UseInfiniteQueryResult<OrganizationType[]>) => page.data,
+      ),
   });
-
-  return {
-    isLoading,
-    isError,
-    error,
-    data,
-  };
 };

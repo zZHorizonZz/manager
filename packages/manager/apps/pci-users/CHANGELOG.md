@@ -3,6 +3,170 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.7](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-users-app@0.11.6...@ovh-ux/manager-pci-users-app@0.11.7) (2024-10-22)
+
+**Note:** Version bump only for package @ovh-ux/manager-pci-users-app
+
+
+
+
+
+## [0.11.6](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-users-app@0.11.5...@ovh-ux/manager-pci-users-app@0.11.6) (2024-10-21)
+
+**Note:** Version bump only for package @ovh-ux/manager-pci-users-app
+
+
+
+
+
+## [0.11.5](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-users-app@0.11.4...@ovh-ux/manager-pci-users-app@0.11.5) (2024-10-17)
+
+**Note:** Version bump only for package @ovh-ux/manager-pci-users-app
+
+
+
+
+
+## [0.11.4](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-users-app@0.11.3...@ovh-ux/manager-pci-users-app@0.11.4) (2024-10-15)
+
+**Note:** Version bump only for package @ovh-ux/manager-pci-users-app
+
+
+
+
+
+## [0.11.3](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-users-app@0.11.2...@ovh-ux/manager-pci-users-app@0.11.3) (2024-10-11)
+
+**Note:** Version bump only for package @ovh-ux/manager-pci-users-app
+
+
+
+
+
+## [0.11.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-users-app@0.11.1...@ovh-ux/manager-pci-users-app@0.11.2) (2024-10-10)
+
+**Note:** Version bump only for package @ovh-ux/manager-pci-users-app
+
+
+
+
+
+## [0.11.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-users-app@0.11.0...@ovh-ux/manager-pci-users-app@0.11.1) (2024-10-10)
+
+**Note:** Version bump only for package @ovh-ux/manager-pci-users-app
+
+
+
+
+
+# [0.11.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-users-app@0.10.6...@ovh-ux/manager-pci-users-app@0.11.0) (2024-10-08)
+
+
+### Features
+
+* **pci-object-storage:** storage 3az ([1ed7551](https://github.com/ovh/manager/commit/1ed7551152ad155fd43484bca27217ae9cf80540))
+
+
+
+
+
+## [0.10.6](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-users-app@0.10.5...@ovh-ux/manager-pci-users-app@0.10.6) (2024-10-04)
+
+**Note:** Version bump only for package @ovh-ux/manager-pci-users-app
+
+
+
+
+
+## [0.10.5](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-users-app@0.10.4...@ovh-ux/manager-pci-users-app@0.10.5) (2024-10-03)
+
+**Note:** Version bump only for package @ovh-ux/manager-pci-users-app
+
+
+
+
+
+## [0.10.4](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-users-app@0.10.3...@ovh-ux/manager-pci-users-app@0.10.4) (2024-10-03)
+
+**Note:** Version bump only for package @ovh-ux/manager-pci-users-app
+
+
+
+
+
+## [0.10.3](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-users-app@0.10.2...@ovh-ux/manager-pci-users-app@0.10.3) (2024-10-02)
+
+**Note:** Version bump only for package @ovh-ux/manager-pci-users-app
+
+
+
+
+
+## [0.10.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-users-app@0.10.1...@ovh-ux/manager-pci-users-app@0.10.2) (2024-09-27)
+
+**Note:** Version bump only for package @ovh-ux/manager-pci-users-app
+
+
+
+
+
+## [0.10.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-users-app@0.10.0...@ovh-ux/manager-pci-users-app@0.10.1) (2024-09-26)
+
+**Note:** Version bump only for package @ovh-ux/manager-pci-users-app
+
+
+
+
+
+# [0.10.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-users-app@0.9.1...@ovh-ux/manager-pci-users-app@0.10.0) (2024-09-26)
+
+
+### Features
+
+* **pci.project:** display correctly the new MUM location ([#12966](https://github.com/ovh/manager/issues/12966)) ([234edc4](https://github.com/ovh/manager/commit/234edc42841ad77db40047b9489eff3fdbba9f8a))
+
+
+
+
+
+## [0.9.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-users-app@0.9.0...@ovh-ux/manager-pci-users-app@0.9.1) (2024-09-19)
+
+**Note:** Version bump only for package @ovh-ux/manager-pci-users-app
+
+
+
+
+
+# [0.9.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-users-app@0.8.3...@ovh-ux/manager-pci-users-app@0.9.0) (2024-09-18)
+
+
+### Features
+
+* **pci-*:** use pci-common banner instead of manager-components ([d1f00eb](https://github.com/ovh/manager/commit/d1f00ebf900f54c48c86414c84a8cb32ebba7e9c))
+* **pci-*:** use pci-common banner instead of manager-components ([95db25b](https://github.com/ovh/manager/commit/95db25b19a129b0f516f78dc9a059ff48e5ae452))
+* **pci-common:** add useProject in pci common and use it in apps ([9a75975](https://github.com/ovh/manager/commit/9a7597560c4872422c331bdfcdf7a4cf92d9bca9))
+* **pci-kubernetes:** synchronize with master ([98c38d0](https://github.com/ovh/manager/commit/98c38d01d20e58a5b1140fdc4606258dedb99305))
+
+
+
+
+
+## [0.8.3](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-users-app@0.8.2...@ovh-ux/manager-pci-users-app@0.8.3) (2024-09-12)
+
+**Note:** Version bump only for package @ovh-ux/manager-pci-users-app
+
+
+
+
+
+## [0.8.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-users-app@0.8.1...@ovh-ux/manager-pci-users-app@0.8.2) (2024-09-11)
+
+**Note:** Version bump only for package @ovh-ux/manager-pci-users-app
+
+
+
+
+
 ## [0.8.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci-users-app@0.8.0...@ovh-ux/manager-pci-users-app@0.8.1) (2024-09-09)
 
 **Note:** Version bump only for package @ovh-ux/manager-pci-users-app

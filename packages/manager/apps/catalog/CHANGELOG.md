@@ -3,6 +3,150 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.14.19](https://github.com/ovh/manager/compare/@ovh-ux/manager-catalog-app@1.14.18...@ovh-ux/manager-catalog-app@1.14.19) (2024-10-22)
+
+**Note:** Version bump only for package @ovh-ux/manager-catalog-app
+
+
+
+
+
+## [1.14.18](https://github.com/ovh/manager/compare/@ovh-ux/manager-catalog-app@1.14.17...@ovh-ux/manager-catalog-app@1.14.18) (2024-10-21)
+
+**Note:** Version bump only for package @ovh-ux/manager-catalog-app
+
+
+
+
+
+## [1.14.17](https://github.com/ovh/manager/compare/@ovh-ux/manager-catalog-app@1.14.16...@ovh-ux/manager-catalog-app@1.14.17) (2024-10-17)
+
+**Note:** Version bump only for package @ovh-ux/manager-catalog-app
+
+
+
+
+
+## [1.14.16](https://github.com/ovh/manager/compare/@ovh-ux/manager-catalog-app@1.14.15...@ovh-ux/manager-catalog-app@1.14.16) (2024-10-15)
+
+**Note:** Version bump only for package @ovh-ux/manager-catalog-app
+
+
+
+
+
+## [1.14.15](https://github.com/ovh/manager/compare/@ovh-ux/manager-catalog-app@1.14.14...@ovh-ux/manager-catalog-app@1.14.15) (2024-10-10)
+
+**Note:** Version bump only for package @ovh-ux/manager-catalog-app
+
+
+
+
+
+## [1.14.14](https://github.com/ovh/manager/compare/@ovh-ux/manager-catalog-app@1.14.13...@ovh-ux/manager-catalog-app@1.14.14) (2024-10-10)
+
+**Note:** Version bump only for package @ovh-ux/manager-catalog-app
+
+
+
+
+
+## [1.14.13](https://github.com/ovh/manager/compare/@ovh-ux/manager-catalog-app@1.14.12...@ovh-ux/manager-catalog-app@1.14.13) (2024-10-08)
+
+**Note:** Version bump only for package @ovh-ux/manager-catalog-app
+
+
+
+
+
+## [1.14.12](https://github.com/ovh/manager/compare/@ovh-ux/manager-catalog-app@1.14.11...@ovh-ux/manager-catalog-app@1.14.12) (2024-10-04)
+
+**Note:** Version bump only for package @ovh-ux/manager-catalog-app
+
+
+
+
+
+## [1.14.11](https://github.com/ovh/manager/compare/@ovh-ux/manager-catalog-app@1.14.10...@ovh-ux/manager-catalog-app@1.14.11) (2024-10-03)
+
+**Note:** Version bump only for package @ovh-ux/manager-catalog-app
+
+
+
+
+
+## [1.14.10](https://github.com/ovh/manager/compare/@ovh-ux/manager-catalog-app@1.14.9...@ovh-ux/manager-catalog-app@1.14.10) (2024-10-03)
+
+**Note:** Version bump only for package @ovh-ux/manager-catalog-app
+
+
+
+
+
+## [1.14.9](https://github.com/ovh/manager/compare/@ovh-ux/manager-catalog-app@1.14.8...@ovh-ux/manager-catalog-app@1.14.9) (2024-10-02)
+
+**Note:** Version bump only for package @ovh-ux/manager-catalog-app
+
+
+
+
+
+## [1.14.8](https://github.com/ovh/manager/compare/@ovh-ux/manager-catalog-app@1.14.7...@ovh-ux/manager-catalog-app@1.14.8) (2024-09-27)
+
+**Note:** Version bump only for package @ovh-ux/manager-catalog-app
+
+
+
+
+
+## [1.14.7](https://github.com/ovh/manager/compare/@ovh-ux/manager-catalog-app@1.14.6...@ovh-ux/manager-catalog-app@1.14.7) (2024-09-26)
+
+**Note:** Version bump only for package @ovh-ux/manager-catalog-app
+
+
+
+
+
+## [1.14.6](https://github.com/ovh/manager/compare/@ovh-ux/manager-catalog-app@1.14.5...@ovh-ux/manager-catalog-app@1.14.6) (2024-09-26)
+
+**Note:** Version bump only for package @ovh-ux/manager-catalog-app
+
+
+
+
+
+## [1.14.5](https://github.com/ovh/manager/compare/@ovh-ux/manager-catalog-app@1.14.4...@ovh-ux/manager-catalog-app@1.14.5) (2024-09-19)
+
+**Note:** Version bump only for package @ovh-ux/manager-catalog-app
+
+
+
+
+
+## [1.14.4](https://github.com/ovh/manager/compare/@ovh-ux/manager-catalog-app@1.14.3...@ovh-ux/manager-catalog-app@1.14.4) (2024-09-18)
+
+**Note:** Version bump only for package @ovh-ux/manager-catalog-app
+
+
+
+
+
+## [1.14.3](https://github.com/ovh/manager/compare/@ovh-ux/manager-catalog-app@1.14.2...@ovh-ux/manager-catalog-app@1.14.3) (2024-09-12)
+
+**Note:** Version bump only for package @ovh-ux/manager-catalog-app
+
+
+
+
+
+## [1.14.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-catalog-app@1.14.1...@ovh-ux/manager-catalog-app@1.14.2) (2024-09-11)
+
+**Note:** Version bump only for package @ovh-ux/manager-catalog-app
+
+
+
+
+
 ## [1.14.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-catalog-app@1.14.0...@ovh-ux/manager-catalog-app@1.14.1) (2024-09-09)
 
 **Note:** Version bump only for package @ovh-ux/manager-catalog-app

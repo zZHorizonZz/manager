@@ -3,6 +3,207 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [19.61.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-dedicated@19.61.0...@ovh-ux/manager-dedicated@19.61.1) (2024-10-22)
+
+**Note:** Version bump only for package @ovh-ux/manager-dedicated
+
+
+
+
+
+# [19.61.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-dedicated@19.60.0...@ovh-ux/manager-dedicated@19.61.0) (2024-10-21)
+
+
+### Features
+
+* **hpc-vmware-managed-vcd:** add new product VCD ([#12552](https://github.com/ovh/manager/issues/12552)) ([c990a65](https://github.com/ovh/manager/commit/c990a65189760c0b109902e3e292b31e8b59dd83))
+
+
+
+
+
+# [19.60.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-dedicated@19.59.0...@ovh-ux/manager-dedicated@19.60.0) (2024-10-21)
+
+
+### Bug Fixes
+
+* **dedicated-cloud:** use description vs id in PCC list and breadcrumb ([#13345](https://github.com/ovh/manager/issues/13345)) ([5f8647e](https://github.com/ovh/manager/commit/5f8647e102f242826934346ae3b2f36aa1ac84b2))
+* **dedicated.vmware:** manage the enabling status for nsxt ([#9969](https://github.com/ovh/manager/issues/9969)) ([55dd4ef](https://github.com/ovh/manager/commit/55dd4efbf1615db5bfc4c4ad363dcd0a07309373))
+* **dedicated:** fix checkmark icon color ([#13509](https://github.com/ovh/manager/issues/13509)) ([12c2052](https://github.com/ovh/manager/commit/12c205221f83f80130a76d5ac59131982bdf5cfd))
+
+
+### Features
+
+* **account:** set up retry on error for kyc india procedure creation ([#13188](https://github.com/ovh/manager/issues/13188)) ([5793671](https://github.com/ovh/manager/commit/57936713c1e21a068f0e628782d2fa9ed4a37342))
+* **dedicated.pcc:** change description term ([#12908](https://github.com/ovh/manager/issues/12908)) ([a7d353d](https://github.com/ovh/manager/commit/a7d353db787ddf018ba21d1f4c45383ea336535c))
+* **dedicated:** update add message error for vMac if 403 response ([#12815](https://github.com/ovh/manager/issues/12815)) ([9b1938d](https://github.com/ovh/manager/commit/9b1938dedc24fe835b35f53f34d78a5507522625))
+
+
+
+
+
+# [19.59.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-dedicated@19.58.0...@ovh-ux/manager-dedicated@19.59.0) (2024-10-17)
+
+
+### Bug Fixes
+
+* **i18n:** add missing translations [CDS 3399] ([dbf1962](https://github.com/ovh/manager/commit/dbf1962e0e747c9883eee6bfca25c27921eb01d3))
+* remove ovh-banner from universes ([#13496](https://github.com/ovh/manager/issues/13496)) ([bd91395](https://github.com/ovh/manager/commit/bd91395193ae97dc5cb7ea1dc6c32b69547e3fde))
+
+
+### Features
+
+* **container:** updated user widget and support dynamic updates ([fb64b9e](https://github.com/ovh/manager/commit/fb64b9eca4c10c868e656eb62f286ae971746de3))
+
+
+
+
+
+# [19.58.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-dedicated@19.57.7...@ovh-ux/manager-dedicated@19.58.0) (2024-10-14)
+
+
+### Features
+
+* **dedicated:**  add link in hpc home page ([#12856](https://github.com/ovh/manager/issues/12856)) ([d1a07ff](https://github.com/ovh/manager/commit/d1a07ff537802b978f97daaff572156e91ad91ab))
+* **dedicated.account:** disable 2FA for SSO connection ([#13162](https://github.com/ovh/manager/issues/13162)) ([024586b](https://github.com/ovh/manager/commit/024586b3d3cb59695ec1a3958cd1cda605731174))
+* **dedicated.ip:** allow parking ip as destination ([#12509](https://github.com/ovh/manager/issues/12509)) ([b713a6e](https://github.com/ovh/manager/commit/b713a6e1bfd94e587d60b1abb40187e02290d3fc))
+
+
+
+
+
+## [19.57.7](https://github.com/ovh/manager/compare/@ovh-ux/manager-dedicated@19.57.6...@ovh-ux/manager-dedicated@19.57.7) (2024-10-10)
+
+
+### Bug Fixes
+
+* **i18n:** add missing translations [CDS 3367] ([4948ec3](https://github.com/ovh/manager/commit/4948ec394b51e52df7310de27edd323c7237cd26))
+
+
+
+
+
+## [19.57.6](https://github.com/ovh/manager/compare/@ovh-ux/manager-dedicated@19.57.5...@ovh-ux/manager-dedicated@19.57.6) (2024-10-08)
+
+**Note:** Version bump only for package @ovh-ux/manager-dedicated
+
+
+
+
+
+## [19.57.5](https://github.com/ovh/manager/compare/@ovh-ux/manager-dedicated@19.57.4...@ovh-ux/manager-dedicated@19.57.5) (2024-10-07)
+
+**Note:** Version bump only for package @ovh-ux/manager-dedicated
+
+
+
+
+
+## [19.57.4](https://github.com/ovh/manager/compare/@ovh-ux/manager-dedicated@19.57.3...@ovh-ux/manager-dedicated@19.57.4) (2024-10-03)
+
+**Note:** Version bump only for package @ovh-ux/manager-dedicated
+
+
+
+
+
+## [19.57.3](https://github.com/ovh/manager/compare/@ovh-ux/manager-dedicated@19.57.2...@ovh-ux/manager-dedicated@19.57.3) (2024-09-30)
+
+
+### Bug Fixes
+
+* **account:** avoid to insert prefix on zipcode ([#13207](https://github.com/ovh/manager/issues/13207)) ([88f561f](https://github.com/ovh/manager/commit/88f561f717b5da73ab3577d6a859a8ce546da2cb))
+* **dedicated:** add missing translation key for byoip ([#13227](https://github.com/ovh/manager/issues/13227)) ([9462e20](https://github.com/ovh/manager/commit/9462e20058ad7b75a4aabaf5f05aa992757d6632))
+* **dedicated:** fix iplist horizontal scroll ([#12828](https://github.com/ovh/manager/issues/12828)) ([580def3](https://github.com/ovh/manager/commit/580def35414039e85713af5d3f6e9ea3167e6363))
+* **dedicated:** rename reverse menu for ipv6 ([#12571](https://github.com/ovh/manager/issues/12571)) ([b747c06](https://github.com/ovh/manager/commit/b747c066ce70706d9110da72cc134dc44d7e5b80))
+* **dedicated:** reset page number on ip listing page ([#13066](https://github.com/ovh/manager/issues/13066)) ([df2052c](https://github.com/ovh/manager/commit/df2052c07f53b3af88b03705a0f73c400a769d0a))
+
+
+
+
+
+## [19.57.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-dedicated@19.57.1...@ovh-ux/manager-dedicated@19.57.2) (2024-09-26)
+
+
+### Bug Fixes
+
+* remove unused translations [CDS] ([cf0c4b9](https://github.com/ovh/manager/commit/cf0c4b9db4e4d6d3e1cb4f1614ca77981ceb57b3))
+
+
+
+
+
+## [19.57.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-dedicated@19.57.0...@ovh-ux/manager-dedicated@19.57.1) (2024-09-25)
+
+**Note:** Version bump only for package @ovh-ux/manager-dedicated
+
+
+
+
+
+# [19.57.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-dedicated@19.56.1...@ovh-ux/manager-dedicated@19.57.0) (2024-09-24)
+
+
+### Features
+
+* **dedicated.server:** vmac banner available on ADV GEN3([#12809](https://github.com/ovh/manager/issues/12809)) ([13b1bd1](https://github.com/ovh/manager/commit/13b1bd187ca89789c550922380f7c2512cdd8d8c))
+* **dedicated:** add vcd terms link for subs ([#13014](https://github.com/ovh/manager/issues/13014)) ([cb302ca](https://github.com/ovh/manager/commit/cb302ca120e96db3a718c6511a120a4ab211f750))
+* **dedicated:** hide backup storage when not available ([#12665](https://github.com/ovh/manager/issues/12665)) ([d4678af](https://github.com/ovh/manager/commit/d4678afc2961a32b3b14bc0b00edcffd0730e593))
+
+
+
+
+
+## [19.56.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-dedicated@19.56.0...@ovh-ux/manager-dedicated@19.56.1) (2024-09-19)
+
+
+### Bug Fixes
+
+* remove unused translations [CDS] ([aa132e2](https://github.com/ovh/manager/commit/aa132e2cd29d322478f62992493ba78c3c8ee2e3))
+
+
+
+
+
+# [19.56.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-dedicated@19.55.0...@ovh-ux/manager-dedicated@19.56.0) (2024-09-17)
+
+
+### Bug Fixes
+
+* **dedicated.cdn:** fix invalid activation label for a domain ([#12835](https://github.com/ovh/manager/issues/12835)) ([135ff36](https://github.com/ovh/manager/commit/135ff3600047cd28b6d36c26532d9576b0173a01))
+* **dedicated.ip:** resolve service selection issue ([62f329b](https://github.com/ovh/manager/commit/62f329bba219c07ce1b44f40a4b305a084771049))
+
+
+### Features
+
+* **dedicated-cloud:** add region in HPC & some display fixes ([#12749](https://github.com/ovh/manager/issues/12749)) ([1e57062](https://github.com/ovh/manager/commit/1e57062cfaec8b8df6e419be088cb25dc4c67e17))
+* **dedicated.ip:** better services selection on ipv4 order ([#12620](https://github.com/ovh/manager/issues/12620)) ([acf067b](https://github.com/ovh/manager/commit/acf067bf4b1e71160537807cb3a8560ecc504244))
+* **dedicated:** update au doc links ([#10272](https://github.com/ovh/manager/issues/10272)) ([a80818f](https://github.com/ovh/manager/commit/a80818fb9acef89a9c3befba41203077b9c9ff06))
+
+
+
+
+
+# [19.55.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-dedicated@19.54.0...@ovh-ux/manager-dedicated@19.55.0) (2024-09-12)
+
+
+### Bug Fixes
+
+* **i18n:** add missing translations [CDS 3281] ([c804e0d](https://github.com/ovh/manager/commit/c804e0da8c3139a3b7b281d071512ca1fc546c52))
+* **i18n:** add missing translations [CDS 3286] ([c27f0cb](https://github.com/ovh/manager/commit/c27f0cb0716bb64cc9ce958f11df26894d95cd7c))
+* **i18n:** add missing translations [CDS 3289] ([569a54f](https://github.com/ovh/manager/commit/569a54f5839838755816baca266df3870713e5e6))
+* **i18n:** add missing translations [CDS 3294] ([41ca756](https://github.com/ovh/manager/commit/41ca756d6d2185f700e6c4352fc88e776c136af8))
+* remove unused translations [CDS] ([7082704](https://github.com/ovh/manager/commit/7082704524cc729975400f25e753482e4a6c77f2))
+
+
+### Features
+
+* **iplb:** move metrics to mimir ([#12483](https://github.com/ovh/manager/issues/12483)) ([1847b8f](https://github.com/ovh/manager/commit/1847b8f570abc6d479fe352cc3a15c09f88bc822))
+
+
+
+
+
 # [19.54.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-dedicated@19.53.1...@ovh-ux/manager-dedicated@19.54.0) (2024-09-10)
 
 

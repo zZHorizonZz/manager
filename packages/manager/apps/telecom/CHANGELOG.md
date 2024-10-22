@@ -3,6 +3,126 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [15.21.13](https://github.com/ovh/manager/compare/@ovh-ux/manager-telecom@15.21.12...@ovh-ux/manager-telecom@15.21.13) (2024-10-22)
+
+**Note:** Version bump only for package @ovh-ux/manager-telecom
+
+
+
+
+
+## [15.21.12](https://github.com/ovh/manager/compare/@ovh-ux/manager-telecom@15.21.11...@ovh-ux/manager-telecom@15.21.12) (2024-10-21)
+
+**Note:** Version bump only for package @ovh-ux/manager-telecom
+
+
+
+
+
+## [15.21.11](https://github.com/ovh/manager/compare/@ovh-ux/manager-telecom@15.21.10...@ovh-ux/manager-telecom@15.21.11) (2024-10-17)
+
+**Note:** Version bump only for package @ovh-ux/manager-telecom
+
+
+
+
+
+## [15.21.10](https://github.com/ovh/manager/compare/@ovh-ux/manager-telecom@15.21.9...@ovh-ux/manager-telecom@15.21.10) (2024-10-14)
+
+
+### Bug Fixes
+
+* **telecom.xdsl:** catch error if service expired on xdsl migration list ([#13537](https://github.com/ovh/manager/issues/13537)) ([2aff278](https://github.com/ovh/manager/commit/2aff2780631f25e97510eb1e726ca32ac723e238))
+
+
+
+
+
+## [15.21.9](https://github.com/ovh/manager/compare/@ovh-ux/manager-telecom@15.21.8...@ovh-ux/manager-telecom@15.21.9) (2024-10-10)
+
+**Note:** Version bump only for package @ovh-ux/manager-telecom
+
+
+
+
+
+## [15.21.8](https://github.com/ovh/manager/compare/@ovh-ux/manager-telecom@15.21.7...@ovh-ux/manager-telecom@15.21.8) (2024-10-07)
+
+**Note:** Version bump only for package @ovh-ux/manager-telecom
+
+
+
+
+
+## [15.21.7](https://github.com/ovh/manager/compare/@ovh-ux/manager-telecom@15.21.6...@ovh-ux/manager-telecom@15.21.7) (2024-10-03)
+
+
+### Bug Fixes
+
+* **i18n:** add missing translations [CDS 3364] ([e032ee5](https://github.com/ovh/manager/commit/e032ee53d3c3b79b8322927f59904223b8c37f71))
+
+
+
+
+
+## [15.21.6](https://github.com/ovh/manager/compare/@ovh-ux/manager-telecom@15.21.5...@ovh-ux/manager-telecom@15.21.6) (2024-09-30)
+
+
+### Bug Fixes
+
+* **telecom:** change type extension by application ([#13310](https://github.com/ovh/manager/issues/13310)) ([dd2baaf](https://github.com/ovh/manager/commit/dd2baaf439143e1695c8a1e13c24fb30d65ad398))
+* **xdsl.statistics:** remove get date into tooltip tile ([ee894db](https://github.com/ovh/manager/commit/ee894dbb9344581a3f0cd075448a96cceb18d124))
+
+
+
+
+
+## [15.21.5](https://github.com/ovh/manager/compare/@ovh-ux/manager-telecom@15.21.4...@ovh-ux/manager-telecom@15.21.5) (2024-09-26)
+
+**Note:** Version bump only for package @ovh-ux/manager-telecom
+
+
+
+
+
+## [15.21.4](https://github.com/ovh/manager/compare/@ovh-ux/manager-telecom@15.21.3...@ovh-ux/manager-telecom@15.21.4) (2024-09-23)
+
+
+### Bug Fixes
+
+* **telecom:** add missing translation for accesories ([#10855](https://github.com/ovh/manager/issues/10855)) ([63b8bb2](https://github.com/ovh/manager/commit/63b8bb25aa7127cea2a05c69ce60f04144f4ca53))
+
+
+
+
+
+## [15.21.3](https://github.com/ovh/manager/compare/@ovh-ux/manager-telecom@15.21.2...@ovh-ux/manager-telecom@15.21.3) (2024-09-16)
+
+**Note:** Version bump only for package @ovh-ux/manager-telecom
+
+
+
+
+
+## [15.21.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-telecom@15.21.1...@ovh-ux/manager-telecom@15.21.2) (2024-09-12)
+
+
+### Bug Fixes
+
+* remove unused translations [CDS] ([7082704](https://github.com/ovh/manager/commit/7082704524cc729975400f25e753482e4a6c77f2))
+
+
+
+
+
+## [15.21.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-telecom@15.21.0...@ovh-ux/manager-telecom@15.21.1) (2024-09-12)
+
+**Note:** Version bump only for package @ovh-ux/manager-telecom
+
+
+
+
+
 # [15.21.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-telecom@15.20.7...@ovh-ux/manager-telecom@15.21.0) (2024-09-09)
 
 

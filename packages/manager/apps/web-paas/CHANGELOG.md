@@ -3,6 +3,62 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.21](https://github.com/ovh/manager/compare/@ovh-ux/manager-web-paas-app@2.2.20...@ovh-ux/manager-web-paas-app@2.2.21) (2024-10-22)
+
+**Note:** Version bump only for package @ovh-ux/manager-web-paas-app
+
+
+
+
+
+## [2.2.20](https://github.com/ovh/manager/compare/@ovh-ux/manager-web-paas-app@2.2.19...@ovh-ux/manager-web-paas-app@2.2.20) (2024-10-21)
+
+**Note:** Version bump only for package @ovh-ux/manager-web-paas-app
+
+
+
+
+
+## [2.2.19](https://github.com/ovh/manager/compare/@ovh-ux/manager-web-paas-app@2.2.18...@ovh-ux/manager-web-paas-app@2.2.19) (2024-10-21)
+
+**Note:** Version bump only for package @ovh-ux/manager-web-paas-app
+
+
+
+
+
+## [2.2.18](https://github.com/ovh/manager/compare/@ovh-ux/manager-web-paas-app@2.2.17...@ovh-ux/manager-web-paas-app@2.2.18) (2024-10-14)
+
+**Note:** Version bump only for package @ovh-ux/manager-web-paas-app
+
+
+
+
+
+## [2.2.17](https://github.com/ovh/manager/compare/@ovh-ux/manager-web-paas-app@2.2.16...@ovh-ux/manager-web-paas-app@2.2.17) (2024-10-03)
+
+**Note:** Version bump only for package @ovh-ux/manager-web-paas-app
+
+
+
+
+
+## [2.2.16](https://github.com/ovh/manager/compare/@ovh-ux/manager-web-paas-app@2.2.15...@ovh-ux/manager-web-paas-app@2.2.16) (2024-09-30)
+
+**Note:** Version bump only for package @ovh-ux/manager-web-paas-app
+
+
+
+
+
+## [2.2.15](https://github.com/ovh/manager/compare/@ovh-ux/manager-web-paas-app@2.2.14...@ovh-ux/manager-web-paas-app@2.2.15) (2024-09-26)
+
+**Note:** Version bump only for package @ovh-ux/manager-web-paas-app
+
+
+
+
+
 ## [2.2.14](https://github.com/ovh/manager/compare/@ovh-ux/manager-web-paas-app@2.2.13...@ovh-ux/manager-web-paas-app@2.2.14) (2024-09-03)
 
 **Note:** Version bump only for package @ovh-ux/manager-web-paas-app

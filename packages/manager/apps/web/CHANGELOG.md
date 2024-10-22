@@ -3,6 +3,168 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [18.39.4](https://github.com/ovh/manager/compare/@ovh-ux/manager-web@18.39.3...@ovh-ux/manager-web@18.39.4) (2024-10-22)
+
+**Note:** Version bump only for package @ovh-ux/manager-web
+
+
+
+
+
+## [18.39.3](https://github.com/ovh/manager/compare/@ovh-ux/manager-web@18.39.2...@ovh-ux/manager-web@18.39.3) (2024-10-21)
+
+**Note:** Version bump only for package @ovh-ux/manager-web
+
+
+
+
+
+## [18.39.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-web@18.39.1...@ovh-ux/manager-web@18.39.2) (2024-10-17)
+
+
+### Bug Fixes
+
+* remove ovh-banner from universes ([#13496](https://github.com/ovh/manager/issues/13496)) ([bd91395](https://github.com/ovh/manager/commit/bd91395193ae97dc5cb7ea1dc6c32b69547e3fde))
+
+
+
+
+
+## [18.39.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-web@18.39.0...@ovh-ux/manager-web@18.39.1) (2024-10-14)
+
+
+### Bug Fixes
+
+* **i18n:** add missing translations [CDS 3314] ([#13167](https://github.com/ovh/manager/issues/13167)) ([60b8ff3](https://github.com/ovh/manager/commit/60b8ff3263db1be73470ad501240cf8525aaf258))
+* **web:** reduce asset size ([9f216a2](https://github.com/ovh/manager/commit/9f216a207797ec21b402f53ba40cc91219583385))
+
+
+
+
+
+# [18.39.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-web@18.38.1...@ovh-ux/manager-web@18.39.0) (2024-10-07)
+
+
+### Features
+
+* **hosting:** attachedDomain actions done through apiv6 ([4404da2](https://github.com/ovh/manager/commit/4404da247bcddd5bb93c9e81eed4e4e318b9e66e))
+
+
+
+
+
+## [18.38.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-web@18.38.0...@ovh-ux/manager-web@18.38.1) (2024-10-03)
+
+
+### Bug Fixes
+
+* **i18n:** add missing translations [CDS 3364] ([e032ee5](https://github.com/ovh/manager/commit/e032ee53d3c3b79b8322927f59904223b8c37f71))
+* remove unused translations [CDS] ([5ff618f](https://github.com/ovh/manager/commit/5ff618f6082f8354dfccd97414be4a7dda3f90ff))
+
+
+
+
+
+# [18.38.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-web@18.37.1...@ovh-ux/manager-web@18.38.0) (2024-09-30)
+
+
+### Bug Fixes
+
+* **web:** sort dbcategory by product size for db activation ([0b94f08](https://github.com/ovh/manager/commit/0b94f08ba3c91c627e00aaba91df71c7d24a8a42))
+
+
+### Features
+
+* **web.hosting:** have to scroll up to see error ([b58b961](https://github.com/ovh/manager/commit/b58b96180d658d4800ab12ced41f8394effa0d3d))
+
+
+
+
+
+## [18.37.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-web@18.37.0...@ovh-ux/manager-web@18.37.1) (2024-09-26)
+
+**Note:** Version bump only for package @ovh-ux/manager-web
+
+
+
+
+
+# [18.37.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-web@18.36.2...@ovh-ux/manager-web@18.37.0) (2024-09-23)
+
+
+### Bug Fixes
+
+* **web.database:** rename database grant enum ([0dcd356](https://github.com/ovh/manager/commit/0dcd356c4a973504e13eb529418b31d6a2678d06))
+* **web.hosting:** remove reset password for modules ([40af846](https://github.com/ovh/manager/commit/40af8466d446a767c34fe228f2e7dc2977d00dd7))
+* **web:** add all subs for offer banner ([06e5d1b](https://github.com/ovh/manager/commit/06e5d1bbdd283b32b389e05dacde73952bef5c03))
+
+
+### Features
+
+* **web:** change detail contact ssl provider ([#12604](https://github.com/ovh/manager/issues/12604)) ([790fa70](https://github.com/ovh/manager/commit/790fa704f364ffa97610c4a52c8952f4341d04c5))
+
+
+
+
+
+## [18.36.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-web@18.36.1...@ovh-ux/manager-web@18.36.2) (2024-09-19)
+
+
+### Bug Fixes
+
+* **i18n:** add missing translations [CDS 3305] ([0cd03cc](https://github.com/ovh/manager/commit/0cd03cc53169d952221a42ceffb6db331d16feec))
+* remove unused translations [CDS] ([aa132e2](https://github.com/ovh/manager/commit/aa132e2cd29d322478f62992493ba78c3c8ee2e3))
+
+
+
+
+
+## [18.36.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-web@18.36.0...@ovh-ux/manager-web@18.36.1) (2024-09-18)
+
+
+### Bug Fixes
+
+* **domains:** dns-modify handle error ([#13114](https://github.com/ovh/manager/issues/13114)) ([92b99e7](https://github.com/ovh/manager/commit/92b99e77d2054beff7ec873fcd5d5b26d3f53188))
+
+
+
+
+
+# [18.36.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-web@18.35.2...@ovh-ux/manager-web@18.36.0) (2024-09-16)
+
+
+### Bug Fixes
+
+* **web.database:** rename redis to caching ([#12638](https://github.com/ovh/manager/issues/12638)) ([133be62](https://github.com/ovh/manager/commit/133be625acaf2232261296622a800fa1b6ed7e67))
+
+
+### Features
+
+* **domains:** rework the dns display page ([#12423](https://github.com/ovh/manager/issues/12423)) ([cf91ffa](https://github.com/ovh/manager/commit/cf91ffaa18b96dbd8a493cfe84dc08af50f4d81d))
+
+
+
+
+
+## [18.35.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-web@18.35.1...@ovh-ux/manager-web@18.35.2) (2024-09-12)
+
+**Note:** Version bump only for package @ovh-ux/manager-web
+
+
+
+
+
+## [18.35.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-web@18.35.0...@ovh-ux/manager-web@18.35.1) (2024-09-12)
+
+
+### Bug Fixes
+
+* **domain:** whois actualization problem ([#13017](https://github.com/ovh/manager/issues/13017)) ([9bb356e](https://github.com/ovh/manager/commit/9bb356e21577074260308041c5b127779536a6bd))
+
+
+
+
+
 # [18.35.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-web@18.34.1...@ovh-ux/manager-web@18.35.0) (2024-09-09)
 
 

@@ -57,7 +57,7 @@ export const OnboardingWalkMe = () => {
   const steps = [
     {
       selector: '#header-user-menu-button',
-      placement: 'bottom-start',
+      placement: 'bottom-end',
       title: t('onboarding_walkme_popover_step1_title'),
       content: t('onboarding_walkme_popover_step1_content'),
       trackingVariant: 'my_account',
@@ -85,7 +85,7 @@ export const OnboardingWalkMe = () => {
     {
       selector: 'services',
       placement: 'left-start',
-      mobilePlacement: 'bottom-start',
+      mobilePlacement: 'right-start',
       title: t('onboarding_walkme_popover_step3_title'),
       content: t('onboarding_walkme_popover_step3_content'),
       trackingVariant: 'my_services',
@@ -93,8 +93,8 @@ export const OnboardingWalkMe = () => {
     },
     {
       selector: '#useful-links',
-      placement: 'top-start',
-      mobilePlacement: 'top-start',
+      placement: 'right-end',
+      mobilePlacement: 'right-end',
       title: t('onboarding_walkme_popover_step4_title'),
       content: t('onboarding_walkme_popover_step4_content'),
       trackingVariant: '',
@@ -112,19 +112,19 @@ export const OnboardingWalkMe = () => {
     },
   ];
 
-  const currentStepRank = useMemo(() => currentStepIndex + 1,[currentStepIndex]);
-  const isLastStep = useMemo(() => currentStepIndex === (steps.length - 1),[currentStepIndex]);
-  
+  const currentStepRank = useMemo(() => currentStepIndex + 1, [currentStepIndex]);
+  const isLastStep = useMemo(() => currentStepIndex === (steps.length - 1), [currentStepIndex]);
+
   useEffect(() => {
     const currentStep = steps[currentStepIndex]
-    if(currentStep){
+    if (currentStep) {
       trackingPlugin.trackPage(`product-navigation-reshuffle::version_V3::modal_guided_tour::step-${currentStepRank}::${currentStep.trackingLabel}`);
     }
   }, [currentStepIndex]);
 
-  const onHideBtnClick = (onboardingStatus?: string) => {
+  const onHideBtnClick = (isDone?: boolean) => {
     const currentStep = steps[currentStepIndex];
-    if(!isLastStep){
+    if (!isLastStep) {
       trackingPlugin.trackClick({
         name: `modal_guided_tour_version_V3::product-navigation-reshuffle::step-${currentStepRank}::${currentStep.trackingLabel}::decline_modal_guided_tour`,
         type: 'action',
@@ -139,16 +139,25 @@ export const OnboardingWalkMe = () => {
         generalPlacement: '[hide]',
       },
     });
-    closeOnboarding(onboardingStatus);
+    closeOnboarding(isDone);
     closeAccountSidebar();
     if (isMobile) {
       closeNavigationSidebar();
     }
   };
 
+  const resizeObserver = new ResizeObserver((entries) => {
+    const currentStepID = steps[currentStepIndex]?.selector.replace('#', '');
+    const el: HTMLElement = stepElement.current;
+    const entry: ResizeObserverEntry = entries.find((entry) => entry.target.id === currentStepID);
+    if (entry?.borderBoxSize[0]?.blockSize) {
+      el.style.height = `${entry.borderBoxSize[0].blockSize + ELEMENT_OFFSET}px`;
+    }
+  })
+
   const onNextBtnClick = () => {
     const currentStep = steps[currentStepIndex];
-    if(!isLastStep){
+    if (!isLastStep) {
       trackingPlugin.trackClick({
         name: `modal_guided_tour_version_V3::product-navigation-reshuffle::step-${currentStepRank}::${currentStep.trackingLabel}::go_to_next_step`,
         type: 'action',
@@ -168,7 +177,7 @@ export const OnboardingWalkMe = () => {
       setCurrentStepIndex(currentStepIndex + 1);
     } else {
       setCurrentNavigationNode(currentUserNode);
-      onHideBtnClick(ONBOARDING_STATUS_ENUM.DONE);
+      onHideBtnClick(true);
     }
   };
 
@@ -197,6 +206,7 @@ export const OnboardingWalkMe = () => {
     } else {
       const targetElement = document.querySelector(currentStep.selector);
       targetPos = targetElement.getBoundingClientRect();
+      resizeObserver.observe(targetElement);
       updatePos(targetPos);
     }
   }, [currentStepIndex, isMobile]);
@@ -295,22 +305,33 @@ export const OnboardingWalkMe = () => {
           <div className={`${popoverStyle['popover-body']} mb-3`}>
             {steps[currentStepIndex].content}
           </div>
-          <div className="d-flex flex-row-reverse justify-content-between">
-            <button
-              className="oui-button oui-button_primary"
-              onClick={onNextBtnClick}
-            >
-              {t('onboarding_walkme_popover_next_step', {
-                current: currentStepIndex + 1,
-                total: steps.length,
-              })}
-            </button>
-            <button
-              className="oui-button oui-button_ghost"
-              onClick={() => onHideBtnClick()}
-            >
-              {t('onboarding_popover_hide_button')}
-            </button>
+
+          <div className={style['onboarding-walkme_popover_footer']}>
+            {currentStepIndex + 1 < steps.length ?
+              <>
+                <button
+                  className="oui-button oui-button_ghost"
+                  onClick={() => onHideBtnClick()}
+                >
+                  {t('onboarding_popover_hide_button')}
+                </button>
+                <button
+                  className="oui-button oui-button_primary"
+                  onClick={onNextBtnClick}
+                >
+                  {t('onboarding_walkme_popover_next_step', {
+                    current: currentStepIndex + 1,
+                    total: steps.length,
+                  })}
+                </button>
+              </> :
+              <button
+                className="oui-button oui-button_primary"
+                onClick={onNextBtnClick}
+              >
+                {t('onboarding_popover_done_button')}
+              </button>
+            }
           </div>
         </div>
         <div

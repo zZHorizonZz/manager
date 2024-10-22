@@ -3,6 +3,121 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.13](https://github.com/ovh/manager/compare/@ovh-ux/manager-iplb-app@2.4.12...@ovh-ux/manager-iplb-app@2.4.13) (2024-10-22)
+
+**Note:** Version bump only for package @ovh-ux/manager-iplb-app
+
+
+
+
+
+## [2.4.12](https://github.com/ovh/manager/compare/@ovh-ux/manager-iplb-app@2.4.11...@ovh-ux/manager-iplb-app@2.4.12) (2024-10-21)
+
+**Note:** Version bump only for package @ovh-ux/manager-iplb-app
+
+
+
+
+
+## [2.4.11](https://github.com/ovh/manager/compare/@ovh-ux/manager-iplb-app@2.4.10...@ovh-ux/manager-iplb-app@2.4.11) (2024-10-21)
+
+**Note:** Version bump only for package @ovh-ux/manager-iplb-app
+
+
+
+
+
+## [2.4.10](https://github.com/ovh/manager/compare/@ovh-ux/manager-iplb-app@2.4.9...@ovh-ux/manager-iplb-app@2.4.10) (2024-10-14)
+
+**Note:** Version bump only for package @ovh-ux/manager-iplb-app
+
+
+
+
+
+## [2.4.9](https://github.com/ovh/manager/compare/@ovh-ux/manager-iplb-app@2.4.8...@ovh-ux/manager-iplb-app@2.4.9) (2024-10-08)
+
+**Note:** Version bump only for package @ovh-ux/manager-iplb-app
+
+
+
+
+
+## [2.4.8](https://github.com/ovh/manager/compare/@ovh-ux/manager-iplb-app@2.4.7...@ovh-ux/manager-iplb-app@2.4.8) (2024-10-07)
+
+**Note:** Version bump only for package @ovh-ux/manager-iplb-app
+
+
+
+
+
+## [2.4.7](https://github.com/ovh/manager/compare/@ovh-ux/manager-iplb-app@2.4.6...@ovh-ux/manager-iplb-app@2.4.7) (2024-10-03)
+
+**Note:** Version bump only for package @ovh-ux/manager-iplb-app
+
+
+
+
+
+## [2.4.6](https://github.com/ovh/manager/compare/@ovh-ux/manager-iplb-app@2.4.5...@ovh-ux/manager-iplb-app@2.4.6) (2024-09-30)
+
+**Note:** Version bump only for package @ovh-ux/manager-iplb-app
+
+
+
+
+
+## [2.4.5](https://github.com/ovh/manager/compare/@ovh-ux/manager-iplb-app@2.4.4...@ovh-ux/manager-iplb-app@2.4.5) (2024-09-26)
+
+**Note:** Version bump only for package @ovh-ux/manager-iplb-app
+
+
+
+
+
+## [2.4.4](https://github.com/ovh/manager/compare/@ovh-ux/manager-iplb-app@2.4.3...@ovh-ux/manager-iplb-app@2.4.4) (2024-09-25)
+
+**Note:** Version bump only for package @ovh-ux/manager-iplb-app
+
+
+
+
+
+## [2.4.3](https://github.com/ovh/manager/compare/@ovh-ux/manager-iplb-app@2.4.2...@ovh-ux/manager-iplb-app@2.4.3) (2024-09-24)
+
+**Note:** Version bump only for package @ovh-ux/manager-iplb-app
+
+
+
+
+
+## [2.4.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-iplb-app@2.4.1...@ovh-ux/manager-iplb-app@2.4.2) (2024-09-19)
+
+**Note:** Version bump only for package @ovh-ux/manager-iplb-app
+
+
+
+
+
+## [2.4.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-iplb-app@2.4.0...@ovh-ux/manager-iplb-app@2.4.1) (2024-09-17)
+
+**Note:** Version bump only for package @ovh-ux/manager-iplb-app
+
+
+
+
+
+# [2.4.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-iplb-app@2.3.13...@ovh-ux/manager-iplb-app@2.4.0) (2024-09-12)
+
+
+### Features
+
+* **iplb:** move metrics to mimir ([#12483](https://github.com/ovh/manager/issues/12483)) ([1847b8f](https://github.com/ovh/manager/commit/1847b8f570abc6d479fe352cc3a15c09f88bc822))
+
+
+
+
+
 ## [2.3.13](https://github.com/ovh/manager/compare/@ovh-ux/manager-iplb-app@2.3.12...@ovh-ux/manager-iplb-app@2.3.13) (2024-08-29)
 
 **Note:** Version bump only for package @ovh-ux/manager-iplb-app

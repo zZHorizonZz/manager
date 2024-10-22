@@ -1,11 +1,7 @@
 import forEach from 'lodash/forEach';
 import isFunction from 'lodash/isFunction';
 
-import {
-  getNetbootGuideUrl,
-  UNSUPPORTED_SSH_KEY_RESCUES,
-  SSH_KEY,
-} from './constants';
+import { getNetbootGuideUrl, UNSUPPORTED_SSH_KEY_RESCUES } from './constants';
 
 export default class BmServerComponentsNetbootCtrl {
   /* @ngInject */
@@ -37,6 +33,8 @@ export default class BmServerComponentsNetbootCtrl {
     this.SSHKEY = 'sshkey';
     this.PASSWORD = 'password';
 
+    this.NETBOOT_PRIORITY_ORDER = [this.RESCUE, this.HARDDISK, this.NETWORK];
+
     this.DEFAULT_RESCUE = 'rescue-customer';
 
     this.loading = {
@@ -51,7 +49,6 @@ export default class BmServerComponentsNetbootCtrl {
     this.currentNetboot = {}; // current netboot option
     this.ssh = {
       publicKey: '',
-      inputRules: SSH_KEY,
     };
     this.rootDevice = {
       root: null,
@@ -220,7 +217,27 @@ export default class BmServerComponentsNetbootCtrl {
     this.netbootService
       .getNetboot(this.serviceName)
       .then((netboots) => {
-        this.netboots = netboots;
+        this.netboots = Object.keys(netboots)
+          .sort((a, b) => {
+            const indexA = this.NETBOOT_PRIORITY_ORDER.indexOf(a);
+            const indexB = this.NETBOOT_PRIORITY_ORDER.indexOf(b);
+
+            if (indexA !== -1 && indexB === -1) {
+              return -1;
+            }
+            if (indexA === -1 && indexB !== -1) {
+              return 1;
+            }
+            if (indexA !== -1 && indexB !== -1) {
+              return indexA - indexB;
+            }
+            return a.localeCompare(b);
+          })
+          .reduce((obj, key) => {
+            const objTmp = { ...obj };
+            objTmp[key] = netboots[key];
+            return objTmp;
+          }, {});
         if (this.netboots.ipxeCustomerScript) {
           delete this.netboots.ipxeCustomerScript;
         }

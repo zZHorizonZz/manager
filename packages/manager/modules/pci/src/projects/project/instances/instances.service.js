@@ -322,18 +322,22 @@ export default class PciProjectInstanceService {
   }
 
   getSnapshotMonthlyPrice(projectId, instance, catalogEndpoint) {
-    return this.CucPriceHelper.getPrices(projectId, catalogEndpoint).then(
-      (catalog) => {
-        return get(
-          catalog,
-          `snapshot.monthly.postpaid.${instance.region}`,
-          get(
+    return this.CucPriceHelper.getPrices(
+      projectId,
+      catalogEndpoint,
+    ).then((catalog) =>
+      instance.isLocalZone
+        ? catalog[`snapshot.consumption.${instance.region}`] ??
+          catalog['snapshot.consumption.LZ']
+        : get(
             catalog,
-            'snapshot.monthly.postpaid',
-            get(catalog, 'snapshot.monthly', false),
+            `snapshot.monthly.postpaid.${instance.region}`,
+            get(
+              catalog,
+              'snapshot.monthly.postpaid',
+              get(catalog, 'snapshot.monthly', false),
+            ),
           ),
-        );
-      },
     );
   }
 
@@ -691,6 +695,19 @@ export default class PciProjectInstanceService {
         );
     }
     return null;
+  }
+
+  getCommercialCatalog({ productCode, nature, ovhSubsidiary }) {
+    return this.$http({
+      url: '/engine/api/v2/commercialCatalog/offers',
+      serviceType: 'apiv2',
+      params: {
+        merchants: ovhSubsidiary,
+        type: 'ATOMIC',
+        nature,
+        productCode,
+      },
+    }).then(({ data: catalog }) => catalog);
   }
 
   getCatalog(endpoint, user) {

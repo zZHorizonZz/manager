@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.12.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-iam@1.12.0...@ovh-ux/manager-iam@1.12.1) (2024-10-21)
+
+
+### Bug Fixes
+
+* **iam:** increase resources size for group creation ([#13440](https://github.com/ovh/manager/issues/13440)) ([c4504e3](https://github.com/ovh/manager/commit/c4504e30255d86613ca22463bd8e1d89e19f0ec7))
+
+
+
+
+
+# [1.12.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-iam@1.11.3...@ovh-ux/manager-iam@1.12.0) (2024-10-07)
+
+
+### Features
+
+* **iam:** need disabled indicators ([#12698](https://github.com/ovh/manager/issues/12698)) ([cb4ee07](https://github.com/ovh/manager/commit/cb4ee0735695d776fd9d9c6a10738da498198d13))
+
+
+
+
+
 ## [1.11.3](https://github.com/ovh/manager/compare/@ovh-ux/manager-iam@1.11.2...@ovh-ux/manager-iam@1.11.3) (2024-08-29)
 
 

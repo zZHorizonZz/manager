@@ -1,6 +1,6 @@
 {
   "key_management_service_service_keys": "Chaves de encriptação",
-  "key_management_service_service-keys_headline": "Crie, importe e faça a gestão das suas chaves de encriptação CMK (Customer Managed Keys).",
+  "key_management_service_service-keys_headline": "Crie e faça a gestão das suas chaves de encriptação CMK (Customer Managed Keys).",
   "key_management_service_service-keys_column_name": "Nome",
   "key_management_service_service-keys_column_id": "ID",
   "key_management_service_service-keys_column_type": "Tipo",
@@ -89,5 +89,6 @@
   "key_management_service_service-keys_delete_success": "A chave foi eliminada com sucesso",
   "key_management_service_service-keys_delete_error": "A eliminação não foi registada corretamente. {{error}}",
   "key_management_service_service-keys_deactivation_success": "A chave foi desativada com sucesso",
-  "key_management_service_service-keys_reactivate_success": "A chave foi reativada com sucesso"
+  "key_management_service_service-keys_reactivate_success": "A chave foi reativada com sucesso",
+  "key_management_service_service_keys_back_link": "Voltar à lista das chaves"
 }

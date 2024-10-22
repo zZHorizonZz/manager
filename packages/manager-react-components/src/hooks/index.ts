@@ -5,13 +5,14 @@ export * from './useCatalogPrice';
 export * from './useMe';
 export * from './useProjectRegions';
 export * from './useProjectUrl';
-export * from './pci-project-provider';
 export * from './feature-availability';
 export * from './datagrid/useIcebergV2';
 export * from './datagrid/useIcebergV6';
 export * from './datagrid/useResourcesV6';
 export * from './services';
 export * from './tasks';
+export * from './date';
+export * from './iam';
 export { useProductMaintenance } from './pci/useMaintenance';
 export {
   getMacroRegion,

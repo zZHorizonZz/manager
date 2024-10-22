@@ -1,6 +1,6 @@
 {
   "name": "@ovh-ux/manager-pci-rancher-app",
-  "version": "1.13.1",
+  "version": "1.19.4",
   "private": true,
   "description": "pci-rancher",
   "repository": {
@@ -21,13 +21,15 @@
     "test:e2e": "tsc && npx playwright test --headed"
   },
   "dependencies": {
-    "@ovh-ux/manager-config": "^7.3.3",
+    "@ovh-ux/manager-config": "^7.5.0",
     "@ovh-ux/manager-core-api": "^0.8.0",
-    "@ovh-ux/manager-react-components": "^1.28.1",
-    "@ovh-ux/manager-react-core-application": "^0.10.0",
-    "@ovh-ux/manager-react-shell-client": "^0.7.0",
+    "@ovh-ux/manager-core-utils": "*",
+    "@ovh-ux/manager-pci-common": "^0.7.4",
+    "@ovh-ux/manager-react-components": "^1.39.1",
+    "@ovh-ux/manager-react-core-application": "^0.10.5",
+    "@ovh-ux/manager-react-shell-client": "^0.7.5",
     "@ovh-ux/request-tagger": "^0.3.0",
-    "@ovh-ux/shell": "^3.7.0",
+    "@ovh-ux/shell": "^3.10.0",
     "@ovhcloud/ods-common-core": "17.2.2",
     "@ovhcloud/ods-common-theming": "17.2.2",
     "@ovhcloud/ods-components": "17.2.2",
@@ -42,7 +44,8 @@
     "react-dom": "^18.2.0",
     "react-i18next": "^14.0.5",
     "react-router": "^6.21.3",
-    "react-router-dom": "^6.3.0"
+    "react-router-dom": "^6.3.0",
+    "react-use": "^17.5.0"
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
@@ -60,7 +63,6 @@
     "babel-plugin-transform-import-meta": "^2.2.1",
     "element-internals-polyfill": "^1.3.10",
     "jest-environment-jsdom": "^29.7.0",
-    "knip": "^3.10.0",
     "rollup-plugin-visualizer": "^5.12.0",
     "tailwindcss": "^3.4.4",
     "ts-jest": "^29.1.1",

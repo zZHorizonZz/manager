@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { useLocation } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import { usePlatform } from '@/hooks';
 import {
   getZimbraPlatformOrganizationDetails,
@@ -8,10 +8,9 @@ import {
 
 export const useOrganization = (organizationId?: string, noCache?: boolean) => {
   const { platformId } = usePlatform();
-  const location = useLocation();
-  const params = new URLSearchParams(location.search);
-  const selectedOrganizationId = params.get('organizationId');
-  const { data, isLoading, isError, error } = useQuery({
+  const [searchParams] = useSearchParams();
+  const selectedOrganizationId = searchParams.get('organizationId');
+  return useQuery({
     queryKey: getZimbraPlatformOrganizationDetailsQueryKey(
       platformId,
       organizationId || selectedOrganizationId,
@@ -24,11 +23,4 @@ export const useOrganization = (organizationId?: string, noCache?: boolean) => {
     enabled: (!!organizationId || !!selectedOrganizationId) && !!platformId,
     gcTime: noCache ? 0 : 5000,
   });
-
-  return {
-    isLoading,
-    isError,
-    error,
-    data,
-  };
 };

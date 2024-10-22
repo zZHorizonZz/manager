@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.7.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-telecom-dashboard@6.7.1...@ovh-ux/manager-telecom-dashboard@6.7.2) (2024-10-17)
+
+
+### Bug Fixes
+
+* remove ovh-banner from universes ([#13496](https://github.com/ovh/manager/issues/13496)) ([bd91395](https://github.com/ovh/manager/commit/bd91395193ae97dc5cb7ea1dc6c32b69547e3fde))
+
+
+
+
+
+## [6.7.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-telecom-dashboard@6.7.0...@ovh-ux/manager-telecom-dashboard@6.7.1) (2024-09-16)
+
+
+### Bug Fixes
+
+* **ffth-eligibility:** initialize eligible and not_eligible tables ([b4bdbc7](https://github.com/ovh/manager/commit/b4bdbc70375a7fb1d058bafe50a6434e409bb935))
+
+
+
+
+
 # [6.7.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-telecom-dashboard@6.6.1...@ovh-ux/manager-telecom-dashboard@6.7.0) (2024-09-09)
 
 

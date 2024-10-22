@@ -4,7 +4,8 @@ export type TrackType =
   | 'trackEvent'
   | 'trackImpression'
   | 'trackClickImpression'
-  | 'trackMVTest';
+  | 'trackMVTest'
+  | 'trackMixCommanderS3';
 
 export interface LegacyTrackingData {
   name: string;
@@ -19,6 +20,21 @@ export interface LegacyTrackingData {
 export interface PciProjectModeParams {
   isDiscoveryProject?: boolean;
   projectId?: string;
+}
+
+export interface TrackImpressionData {
+  campaignId: string;
+  creation: string;
+  format?: string;
+  generalPlacement?: string;
+  detailedPlacement?: string;
+  variant?: string;
+  advertiserId?: string;
+  url?: string;
+}
+
+export interface TrackClickImpressionData {
+  click: TrackImpressionData;
 }
 
 export interface GenericTrackingData {

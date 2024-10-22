@@ -25,6 +25,9 @@ import {
   BLOCK_ADDITIONAL_IP,
   IP_FAILOVER_PLANCODE,
   ALERT_ID,
+  DATACENTER_TO_COUNTRY,
+  DATACENTER_TO_REGION,
+  IP_LOCATION_GROUPS_BASED_ON_DATACENTER,
 } from './ipv4.constant';
 
 export default class AgoraIpV4OrderController {
@@ -43,6 +46,7 @@ export default class AgoraIpV4OrderController {
     User,
     atInternet,
     coreConfig,
+    ovhManagerRegionService,
   ) {
     this.$q = $q;
     this.$rootScope = $rootScope;
@@ -62,12 +66,17 @@ export default class AgoraIpV4OrderController {
     this.ALERT_ID = ALERT_ID;
     this.region = coreConfig.getRegion();
     this.type = IP_TYPE_TITLE.IPv4;
+    this.ovhManagerRegionService = ovhManagerRegionService;
   }
 
   $onInit() {
+    this.catalogByLocation = [];
+    this.isParkingIp = false;
+    this.parkingIpOffers = [];
     this.model = {
       params: {},
       selectedService: null,
+      selectedServiceRegion: null,
     };
     this.loading = {};
     this.user = this.$state.params.user;
@@ -108,8 +117,18 @@ export default class AgoraIpV4OrderController {
         services: this.Ipv4AgoraOrder.getServices(),
       })
       .then((results) => {
+        results.services.push({
+          displayName: this.$translate.instant('ip_servicetype__PARK'),
+          serviceName: 'parking',
+          type: 'parking',
+        });
         this.user = results.user;
-        this.services = results.services;
+        this.services = results.services.map((service) => ({
+          ...service,
+          translatedType: this.$translate.instant(
+            `ip_filter_services_title_${service.type}`,
+          ),
+        }));
         this.ipFailoverPrice = this.getIpFailoverPrice();
 
         if (this.$state.params.service) {
@@ -129,8 +148,8 @@ export default class AgoraIpV4OrderController {
       });
   }
 
-  getServiceTypeLabel(type) {
-    return this.$translate.instant(`ip_filter_services_title_${type}`);
+  static getServiceTypeLabel(item) {
+    return item.translatedType;
   }
 
   createOfferDto(ipOffer) {
@@ -144,6 +163,10 @@ export default class AgoraIpV4OrderController {
       (config) => config.name === 'country',
     ).values;
 
+    const datacenterCodes = ipOffer.details.product.configurations.find(
+      (config) => config.name === 'datacenter',
+    )?.values;
+
     return {
       productName: ipOffer.invoiceName,
       productShortName: ipOffer.invoiceName.replace(/^.*\]\s*/, ''),
@@ -154,6 +177,7 @@ export default class AgoraIpV4OrderController {
       ).price,
       maximumQuantity,
       quantities: range(1, maximumQuantity + 1),
+      datacenterCodes,
       countries: countryCodes.map((countryCode) => ({
         code: countryCode,
         description: this.$translate.instant(
@@ -174,6 +198,43 @@ export default class AgoraIpV4OrderController {
     };
   }
 
+  getServiceRegion() {
+    this.loadServiceRegion = true;
+    this.model.selectedServiceRegion = null;
+    let request = null;
+    const { serviceName } = this.model.selectedService;
+
+    switch (this.model.selectedService?.type) {
+      case PRODUCT_TYPES.dedicatedServer.typeName:
+        request = this.Ipv4AgoraOrder.getDedicatedServerRegion(serviceName);
+        break;
+      case PRODUCT_TYPES.vps.typeName:
+        request = this.Ipv4AgoraOrder.getVpsServerRegion(serviceName);
+        break;
+      case PRODUCT_TYPES.privateCloud.typeName:
+        request = this.Ipv4AgoraOrder.getDedicatedCloudServerRegion(
+          serviceName,
+        );
+        break;
+      default:
+        request = this.$q.when(null);
+        break;
+    }
+
+    request.then((region) => {
+      if (region) {
+        this.model.selectedServiceRegion =
+          this.model.selectedService?.type ===
+          PRODUCT_TYPES.dedicatedServer.typeName
+            ? this.$translate.instant(`ip_region_${region}`)
+            : this.ovhManagerRegionService.getTranslatedMicroRegionLocation(
+                region.toUpperCase(),
+              );
+      }
+      this.loadServiceRegion = false;
+    });
+  }
+
   static getRegionsOffers(countries) {
     return flattenDeep(
       IP_LOCATION_GROUPS.filter(
@@ -192,6 +253,23 @@ export default class AgoraIpV4OrderController {
     }
 
     return 'USA';
+  }
+
+  static getRegionFromDatacenter(datacenter) {
+    return IP_LOCATION_GROUPS_BASED_ON_DATACENTER.find((group) =>
+      group.datacenter.includes(datacenter),
+    )?.labels;
+  }
+
+  static getCountriesFromDatacenter(selectedServiceDatacenter, ipOffers) {
+    const ipOffer = ipOffers.find((offer) => {
+      return offer.details.product.configurations
+        .find((config) => config.name === 'datacenter')
+        ?.values?.includes(selectedServiceDatacenter);
+    });
+    return ipOffer.details.product.configurations.find(
+      (config) => config.name === 'country',
+    )?.values;
   }
 
   loadPrivateCloudIpOffers(serviceName) {
@@ -227,6 +305,40 @@ export default class AgoraIpV4OrderController {
 
   trackFinalStep() {
     this.trackStep(3);
+  }
+
+  onIpServiceSelection() {
+    this.isParkingIp =
+      this.model?.selectedService?.type === PRODUCT_TYPES.parking.typeName;
+    if (this.isParkingIp) {
+      this.loading.region = true;
+      this.parkingIpOffers = this.ipCatalog.filter((plan) =>
+        /^ip-v4|^ip-failover/.test(plan.planCode),
+      );
+      const DATACENTERS = this.parkingIpOffers
+        .map((ipOffer) => {
+          return ipOffer.details.product.configurations.find(
+            (config) => config.name === 'datacenter',
+          )?.values;
+        })
+        .flat();
+      const uniqueDatacenters = [...new Set(DATACENTERS)];
+      this.catalogByLocation = uniqueDatacenters.map((datacenter) => {
+        const flag =
+          datacenter === 'ERI' ? 'gb' : DATACENTER_TO_COUNTRY[datacenter];
+        return {
+          datacenter,
+          regionName: DATACENTER_TO_REGION[datacenter],
+          location: this.$translate.instant(
+            `ip_agora_ipv6_location_${DATACENTER_TO_REGION[datacenter]}`,
+          ),
+          icon: `oui-flag oui-flag_${flag}`,
+        };
+      });
+      this.loading.region = false;
+      return null;
+    }
+    return this.manageLoadIpOffers();
   }
 
   manageLoadIpOffers() {
@@ -280,23 +392,60 @@ export default class AgoraIpV4OrderController {
   loadIpOffers() {
     this.model.params = {};
     let ipOffersPromise;
+    let failoverIpOfferDetails;
+    let blockIpOfferDetails;
 
     this.isPrivateCloudOffer =
-      get(this.model, 'selectedService.type') ===
-      PRODUCT_TYPES.privateCloud.typeName;
+      this.model?.selectedService?.type === PRODUCT_TYPES.privateCloud.typeName;
 
     if (this.isPrivateCloudOffer) {
       ipOffersPromise = this.loadPrivateCloudIpOffers(
         get(this.model, 'selectedService.serviceName'),
       );
+    } else if (this.isParkingIp) {
+      // Country for Single IP selection in parking
+      const country = [
+        DATACENTER_TO_COUNTRY[this.model.selectedRegion.datacenter],
+      ];
+      // Multiple countries are available for block IP selection in parking and vrack
+      const countries = AgoraIpV4OrderController.getCountriesFromDatacenter(
+        this.model.selectedRegion.datacenter,
+        this.parkingIpOffers,
+      ).map((value) => value.toLowerCase());
+      const ipOfferDetails = this.parkingIpOffers.map(
+        this.createOfferDto.bind(this),
+      );
+      const ipOffersByDatacenter = AgoraIpV4OrderController.getRegionFromDatacenter(
+        this.model.selectedRegion.datacenter,
+      );
+      blockIpOfferDetails = this.filterOffer(
+        ipOfferDetails,
+        'productShortName',
+        'block',
+      );
+      failoverIpOfferDetails = this.filterOffer(
+        ipOfferDetails,
+        'planCode',
+        'failover',
+      );
+      this.failoverIpOffers = this.getOfferDetails(
+        failoverIpOfferDetails,
+        ipOffersByDatacenter,
+        country,
+      );
+      this.blockIpOffers = this.getOfferDetails(
+        blockIpOfferDetails,
+        ipOffersByDatacenter,
+        countries,
+      ).sort((a, b) => a.price.value - b.price.value);
     } else {
       ipOffersPromise = this.Ipv4AgoraOrder.getIpOffers(
         this.user.ovhSubsidiary,
         this.catalogName,
       ).then((ipOffers) => {
-        const ipOfferDetails = ipOffers.map(this.createOfferDto.bind(this));
-        let failoverIpOfferDetails;
-        let blockIpOfferDetails;
+        const ipOfferDetails = ipOffers
+          .filter((plan) => /^ip-v4|^ip-failover/.test(plan.planCode))
+          .map(this.createOfferDto.bind(this));
         if (this.model.selectedService.type === PRODUCT_TYPES.vps.typeName) {
           failoverIpOfferDetails = ipOfferDetails
             .filter(({ planCode }) => planCode.includes('failover'))
@@ -402,6 +551,13 @@ export default class AgoraIpV4OrderController {
       this.model.params.selectedCountry = head(
         get(this.model, 'params.selectedOffer.countries'),
       );
+    } else if (this.isParkingIp) {
+      const code = DATACENTER_TO_COUNTRY[this.model.selectedRegion.datacenter];
+      this.model.params.selectedCountry = {
+        code: code.toUpperCase(),
+        description: this.$translate.instant(`country_${code.toUpperCase()}`),
+        icon: `oui-flag oui-flag_${code}`,
+      };
     }
   }
 
@@ -453,6 +609,17 @@ export default class AgoraIpV4OrderController {
         pricingMode: get(this.model.params, 'selectedOffer.pricingMode'),
         serviceName: get(this.model, 'selectedService.serviceName'),
         ...commonProductProps,
+      });
+    } else if (this.isParkingIp) {
+      const { datacenter } = this.model.selectedRegion;
+      productToOrder = this.IpAgoraOrder.constructor.createProductToOrder({
+        organisation: get(
+          this.model.params,
+          'selectedOrganisation.organisationId',
+        ),
+        ...commonProductProps,
+        country: params.selectedCountry?.code,
+        datacenter,
       });
     } else {
       productToOrder = this.IpAgoraOrder.constructor.createProductToOrder({
@@ -515,7 +682,8 @@ export default class AgoraIpV4OrderController {
     return (
       this.model.selectedService?.type === PRODUCT_TYPES.vps.typeName ||
       this.model.selectedService?.type ===
-        PRODUCT_TYPES.dedicatedServer.typeName
+        PRODUCT_TYPES.dedicatedServer.typeName ||
+      this.model.selectedService?.type === PRODUCT_TYPES.parking.typeName
     );
   }
 
@@ -524,7 +692,8 @@ export default class AgoraIpV4OrderController {
       this.model.selectedService?.type ===
         PRODUCT_TYPES.privateCloud.typeName ||
       this.model.selectedService?.type ===
-        PRODUCT_TYPES.dedicatedServer.typeName
+        PRODUCT_TYPES.dedicatedServer.typeName ||
+      this.model.selectedService?.type === PRODUCT_TYPES.parking.typeName
     );
   }
 

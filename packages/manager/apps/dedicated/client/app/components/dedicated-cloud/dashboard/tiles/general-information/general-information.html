@@ -1,12 +1,13 @@
 <oui-tile
     class="h-100"
     data-heading="{{:: 'ovhManagerPccDashboardGeneralInformation_heading' | translate }}"
+    data-loading="$ctrl.isLoading"
 >
     <div class="oui-tile__item">
         <dl class="oui-tile__definition">
             <dt
                 class="oui-tile__term"
-                data-translate="ovhManagerPccDashboardGeneralInformation_description_term"
+                data-translate="ovhManagerPccDashboardGeneralInformation_name_term"
             ></dt>
             <dd
                 class="oui-tile__description"
@@ -17,7 +18,7 @@
         <oui-action-menu data-compact data-placement="end">
             <oui-action-menu-item data-on-click=":: $ctrl.editDescription()">
                 <span
-                    data-translate="ovhManagerPccDashboardGeneralInformation_description_actionMenu_update"
+                    data-translate="ovhManagerPccDashboardGeneralInformation_name_actionMenu_update"
                 ></span>
             </oui-action-menu-item>
         </oui-action-menu>
@@ -102,13 +103,18 @@
     </oui-tile-definition>
 
     <oui-tile-definition
-        data-term="{{:: 'ovhManagerPccDashboardGeneralInformation_location_term' | translate }}"
+        data-term="{{:: 'ovhManagerPccDashboardGeneralInformation_location_zone' | translate }}"
         data-description="{{:: $ctrl.bindings.location }}"
     ></oui-tile-definition>
 
     <oui-tile-definition
-        data-term="{{:: 'ovhManagerPccDashboardGeneralInformation_accessPolicy_term' | translate }}"
-        data-description="{{:: $ctrl.bindings.accessPolicy }}"
+        data-term="{{:: 'ovhManagerPccDashboardGeneralInformation_location_region_location' | translate }}"
+        data-description="{{:: $ctrl.locationInfo.regionLocation }}"
+    ></oui-tile-definition>
+
+    <oui-tile-definition
+        data-term="{{:: 'ovhManagerPccDashboardGeneralInformation_location_region' | translate }}"
+        data-description="{{:: $ctrl.locationInfo.region }}"
     ></oui-tile-definition>
 
     <oui-tile-definition

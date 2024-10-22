@@ -1,6 +1,6 @@
 {
   "key_management_service_service_keys": "Encryption keys",
-  "key_management_service_service-keys_headline": "Create, import and manage your Customer Managed Keys (CMK) encryption keys.",
+  "key_management_service_service-keys_headline": "Create and manage your Customer Managed Keys (CMK).",
   "key_management_service_service-keys_column_name": "Name",
   "key_management_service_service-keys_column_id": "ID",
   "key_management_service_service-keys_column_type": "Type",
@@ -89,5 +89,6 @@
   "key_management_service_service-keys_delete_success": "Key deleted",
   "key_management_service_service-keys_delete_error": "Deletion pending. {{error}}",
   "key_management_service_service-keys_deactivation_success": "The key has been disabled",
-  "key_management_service_service-keys_reactivate_success": "The key has been re-enabled"
+  "key_management_service_service-keys_reactivate_success": "The key has been re-enabled",
+  "key_management_service_service_keys_back_link": "Back to the list of keys"
 }

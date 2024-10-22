@@ -34,14 +34,15 @@
     <!-- <Resources> -->
     <div data-ng-transclude="resourcesHeaderSlot"></div>
     <div
-        class="iam-resource_select--resources_container d-flex flex-column flex-sm-row"
+        class="d-flex flex-column flex-sm-row"
+        data-ng-class="{'iam-resource_select--resources_container': $ctrl.hasResourcesSiblingSlot}"
     >
         <oui-field
             class="w-100"
             data-label="{{:: $ctrl.resourcesLabel }}"
             data-error-messages="{
                 required: $ctrl.resourcesRequiredMessage || ('iam_resource_select_resources_error_required' | translate),
-                limit: $ctrl.resourcesLimitMessage || ('iam_resource_select_resources_error_limit' | translate),
+                limit: ('iam_resource_select_resources_error_limit' | translate:{'max':$ctrl.maxLength}),
             }"
         >
             <oui-select

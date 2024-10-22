@@ -3,6 +3,102 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.64.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci@6.63.3...@ovh-ux/manager-pci@6.64.0) (2024-10-22)
+
+
+### Bug Fixes
+
+* **public-cloud:** fix monthly price display ([#13048](https://github.com/ovh/manager/issues/13048)) ([a26dba8](https://github.com/ovh/manager/commit/a26dba87234652dfef21610e2436987f6f4185b7))
+
+
+### Features
+
+* **pci.instance:** add local zone backup ff ([#13619](https://github.com/ovh/manager/issues/13619)) ([38ec4d7](https://github.com/ovh/manager/commit/38ec4d7855ef2b7d79c540a694e93c324ab17255))
+* **pci:** add mix commander tag at projet creation & activation ([#13436](https://github.com/ovh/manager/issues/13436)) ([414712c](https://github.com/ovh/manager/commit/414712cfff26d6b846a603700dd723fe9568523b))
+
+
+
+
+
+## [6.63.3](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci@6.63.2...@ovh-ux/manager-pci@6.63.3) (2024-10-18)
+
+
+### Bug Fixes
+
+* **pci.cloud-archive:** fix list and confing pages ([#13637](https://github.com/ovh/manager/issues/13637)) ([e62d5d0](https://github.com/ovh/manager/commit/e62d5d018258afe813bd41eec32fb3e1cdb5d711))
+
+
+
+
+
+## [6.63.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci@6.63.1...@ovh-ux/manager-pci@6.63.2) (2024-10-14)
+
+
+### Reverts
+
+* Revert "Revert "feat(pci.instance): open backup creation for LZ regions (#13250)"" (#13524) ([16c8c61](https://github.com/ovh/manager/commit/16c8c61df6c38feedddb39afaa1baa5865a78cd0)), closes [#13250](https://github.com/ovh/manager/issues/13250) [#13524](https://github.com/ovh/manager/issues/13524)
+
+
+
+
+
+## [6.63.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci@6.63.0...@ovh-ux/manager-pci@6.63.1) (2024-10-10)
+
+
+### Bug Fixes
+
+* **i18n:** add missing translations [CDS 3367] ([4948ec3](https://github.com/ovh/manager/commit/4948ec394b51e52df7310de27edd323c7237cd26))
+* **i18n:** add missing translations [CDS 3370] ([8de108f](https://github.com/ovh/manager/commit/8de108f9010ccf2ac06501a07537f94fbfb06020))
+* **i18n:** add missing translations [CDS 3376] ([5809574](https://github.com/ovh/manager/commit/5809574046d50e242bb02e165c1091270cf6683f))
+
+
+
+
+
+# [6.63.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci@6.62.0...@ovh-ux/manager-pci@6.63.0) (2024-10-08)
+
+
+### Features
+
+* **pci-object-storage:** storage 3az ([1ed7551](https://github.com/ovh/manager/commit/1ed7551152ad155fd43484bca27217ae9cf80540))
+
+
+
+
+
+# [6.62.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci@6.61.0...@ovh-ux/manager-pci@6.62.0) (2024-10-07)
+
+
+### Features
+
+* **pci.instance:** open backup creation for LZ regions ([#13250](https://github.com/ovh/manager/issues/13250)) ([eeb2614](https://github.com/ovh/manager/commit/eeb261440b7c79fbbf0e507549006078d5412d35))
+* **savings-plan:** display banner for Prod Day ([#13405](https://github.com/ovh/manager/issues/13405)) ([9b87a3b](https://github.com/ovh/manager/commit/9b87a3b866b7df5eec9d853750aed53ae8bc3560))
+
+
+### Reverts
+
+* Revert "feat(pci.instance): open backup creation for LZ regions (#13250)" ([aaa5460](https://github.com/ovh/manager/commit/aaa546091bddd537b0668c17b2c5c887376f6887)), closes [#13250](https://github.com/ovh/manager/issues/13250)
+
+
+
+
+
+# [6.61.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci@6.60.1...@ovh-ux/manager-pci@6.61.0) (2024-10-02)
+
+
+### Bug Fixes
+
+* **pci.savings-plan:** revert key for hidden prod ([#13399](https://github.com/ovh/manager/issues/13399)) ([564c315](https://github.com/ovh/manager/commit/564c315dc8ce0111e92baceeb2090d2961ba77aa))
+
+
+### Features
+
+* **pci.savings-plan:** savings plan ([#12172](https://github.com/ovh/manager/issues/12172)) ([6744853](https://github.com/ovh/manager/commit/67448534cdde94927ccab308e002b8894f966367))
+
+
+
+
+
 ## [6.60.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-pci@6.60.0...@ovh-ux/manager-pci@6.60.1) (2024-09-05)
 
 

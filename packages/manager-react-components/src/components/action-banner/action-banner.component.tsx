@@ -11,6 +11,7 @@ import {
   ODS_THEME_COLOR_INTENT,
   ODS_THEME_TYPOGRAPHY_SIZE,
 } from '@ovhcloud/ods-common-theming';
+import { clsx } from 'clsx';
 
 export type ActionBannerProps = {
   message: string;
@@ -18,6 +19,7 @@ export type ActionBannerProps = {
   type?: ODS_MESSAGE_TYPE;
   onClick?: () => void;
   href?: string;
+  className?: string;
 };
 
 export function ActionBanner({
@@ -26,15 +28,16 @@ export function ActionBanner({
   type = ODS_MESSAGE_TYPE.info,
   onClick,
   href,
+  className,
 }: Readonly<ActionBannerProps>) {
   return (
     <OsdsMessage
       type={type}
-      color={(type as unknown) as ODS_THEME_COLOR_INTENT}
-      className={'mt-3 flex-row'}
+      color={type as unknown as ODS_THEME_COLOR_INTENT}
+      className={clsx('mt-3 flex-row', className)}
       data-testid="actionBanner-message_container"
     >
-      <div className={'sm:flex sm:flex-row sm:justify-between sm:items-center'}>
+      <div className="sm:flex sm:flex-row sm:justify-between sm:items-center">
         <OsdsText
           size={ODS_THEME_TYPOGRAPHY_SIZE._400}
           color={ODS_THEME_COLOR_INTENT.default}
@@ -60,7 +63,6 @@ export function ActionBanner({
           <OsdsLink
             className="sm:mt-0 mt-4 sm:ml-4 ml-0"
             color={ODS_THEME_COLOR_INTENT.primary}
-            onClick={() => onClick && onClick()}
             href={href}
             target={OdsHTMLAnchorElementTarget._blank}
           >

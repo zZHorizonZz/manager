@@ -1,5 +1,7 @@
 import {
   LegacyTrackingData,
+  TrackImpressionData,
+  TrackClickImpressionData,
   TrackingDefaults,
   PciProjectModeParams,
 } from '@ovh-ux/ovh-at-internet';
@@ -12,9 +14,10 @@ export interface TrackingAPI {
   onUserConsentFromModal(consent: boolean): PromiseLike<void>;
   trackClick(data: LegacyTrackingData): PromiseLike<void>;
   trackPage(data: LegacyTrackingData): PromiseLike<void>;
+  trackMixCommanderS3(data: LegacyTrackingData): void;
   trackEvent(data: LegacyTrackingData): PromiseLike<void>;
-  trackImpression(data: LegacyTrackingData): PromiseLike<void>;
-  trackClickImpression(data: LegacyTrackingData): PromiseLike<void>;
+  trackImpression(data: TrackImpressionData): PromiseLike<void>;
+  trackClickImpression(data: TrackClickImpressionData): PromiseLike<void>;
   trackMVTest(data: LegacyTrackingData): PromiseLike<void>;
   setDefaults(def: TrackingDefaults): PromiseLike<TrackingDefaults>;
   setRegion(region: string): PromiseLike<void>;
@@ -53,19 +56,25 @@ export function exposeTrackingAPI(shellClient: ShellClient): TrackingAPI {
         method: 'trackPage',
         args: [data],
       }),
+    trackMixCommanderS3: (data: LegacyTrackingData) =>
+      shellClient.invokePluginMethod<void>({
+        plugin: 'tracking',
+        method: 'trackMixCommanderS3',
+        args: [data],
+      }),
     trackEvent: (data: LegacyTrackingData) =>
       shellClient.invokePluginMethod<void>({
         plugin: 'tracking',
         method: 'trackEvent',
         args: [data],
       }),
-    trackImpression: (data: LegacyTrackingData) =>
+    trackImpression: (data: TrackImpressionData) =>
       shellClient.invokePluginMethod<void>({
         plugin: 'tracking',
         method: 'trackImpression',
         args: [data],
       }),
-    trackClickImpression: (data: LegacyTrackingData) =>
+    trackClickImpression: (data: TrackClickImpressionData) =>
       shellClient.invokePluginMethod<void>({
         plugin: 'tracking',
         method: 'trackClickImpression',

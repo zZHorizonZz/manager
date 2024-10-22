@@ -3,6 +3,73 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.36.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-bm-server-components@1.36.0...@ovh-ux/manager-bm-server-components@1.36.1) (2024-10-21)
+
+**Note:** Version bump only for package @ovh-ux/manager-bm-server-components
+
+
+
+
+
+# [1.36.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-bm-server-components@1.35.0...@ovh-ux/manager-bm-server-components@1.36.0) (2024-10-21)
+
+
+### Features
+
+* **manager-components:** add sshKey component ([#12994](https://github.com/ovh/manager/issues/12994)) ([2a9c014](https://github.com/ovh/manager/commit/2a9c014188cbb6911f903eba28a9600b028f311a))
+
+
+
+
+
+# [1.35.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-bm-server-components@1.34.1...@ovh-ux/manager-bm-server-components@1.35.0) (2024-10-14)
+
+
+### Features
+
+* **dedicated:** add netboot priority order ([#12307](https://github.com/ovh/manager/issues/12307)) ([0ac1e21](https://github.com/ovh/manager/commit/0ac1e211f125609aab16f4624faaa4a976c3a66c))
+
+
+
+
+
+## [1.34.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-bm-server-components@1.34.0...@ovh-ux/manager-bm-server-components@1.34.1) (2024-09-26)
+
+**Note:** Version bump only for package @ovh-ux/manager-bm-server-components
+
+
+
+
+
+# [1.34.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-bm-server-components@1.33.1...@ovh-ux/manager-bm-server-components@1.34.0) (2024-09-24)
+
+
+### Bug Fixes
+
+* **dedicated:** modify information for unknown regions ([#12478](https://github.com/ovh/manager/issues/12478)) ([96fa49a](https://github.com/ovh/manager/commit/96fa49a7854d9e0140164d136b042fc486322930))
+
+
+### Features
+
+* **dedicated.server:** vmac banner available on ADV GEN3([#12809](https://github.com/ovh/manager/issues/12809)) ([13b1bd1](https://github.com/ovh/manager/commit/13b1bd187ca89789c550922380f7c2512cdd8d8c))
+* **dedicated:** hide backup storage when not available ([#12665](https://github.com/ovh/manager/issues/12665)) ([d4678af](https://github.com/ovh/manager/commit/d4678afc2961a32b3b14bc0b00edcffd0730e593))
+* **dedicated:** open ipmi sol on us region ([#13064](https://github.com/ovh/manager/issues/13064)) ([6b963ad](https://github.com/ovh/manager/commit/6b963ad8e43404326450081a864b1a2d2b0faefb))
+
+
+
+
+
+## [1.33.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-bm-server-components@1.33.0...@ovh-ux/manager-bm-server-components@1.33.1) (2024-09-12)
+
+
+### Bug Fixes
+
+* remove unused translations [CDS] ([7082704](https://github.com/ovh/manager/commit/7082704524cc729975400f25e753482e4a6c77f2))
+
+
+
+
+
 # [1.33.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-bm-server-components@1.32.0...@ovh-ux/manager-bm-server-components@1.33.0) (2024-09-03)
 
 

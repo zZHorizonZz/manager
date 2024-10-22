@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { useNavigate, useParams } from 'react-router-dom';
 import { PageLayout } from '@ovh-ux/manager-react-components';
+import { isDiscoveryProject, useProject } from '@ovh-ux/manager-pci-common';
 import { getRancherPlan, getReferenceRancherInfo } from '@/data/api/services';
 import CreateRancher from '@/components/layout-helpers/CreateRancher/CreateRancher.component';
 import useCreateRancher from '@/data/hooks/useCreateRancher/useCreateRancher';
 import Breadcrumb from '@/components/Breadcrumb/Breadcrumb.component';
 import { getRanchersUrl } from '@/utils/route';
-import usePciProject from '@/hooks/usePciProject';
-import { PciProjectPlanCode, RancherService } from '@/types/api.type';
+import { RancherService } from '@/types/api.type';
 import { ranchersQueryKey } from '@/data/hooks/useRancher/useRancher';
 import {
   useSimpleTrackingPage,
@@ -19,6 +19,8 @@ import {
   TrackingEvent,
   TrackingPageView,
 } from '../../utils/tracking';
+
+import { useRancherPrices } from '@/hooks/useRancherPrices';
 import queryClient from '@/queryClient';
 import useVersions from '@/data/hooks/useVersions/useVersions';
 
@@ -33,7 +35,7 @@ export default function Create() {
   useTrackingPage(TrackingPageView.CreateRancher);
   const trackingPage = useSimpleTrackingPage();
 
-  const { data: project } = usePciProject();
+  const { data: project } = useProject();
 
   const ranchersQueryKeyValue = ranchersQueryKey(projectId);
 
@@ -61,7 +63,7 @@ export default function Create() {
     queryKey: [getReferenceRancherInfo(projectId, 'plan')],
     queryFn: () => getRancherPlan(projectId),
   });
-
+  const { plansPricing } = useRancherPrices();
   const { data: versions } = useVersions();
 
   return (
@@ -75,9 +77,8 @@ export default function Create() {
         onCreateRancher={createRancher}
         versions={versions?.filter((v) => v.status === 'AVAILABLE')}
         plans={plans?.data}
-        isProjectDiscoveryMode={
-          project?.planCode === PciProjectPlanCode.DISCOVERY
-        }
+        pricing={plansPricing}
+        isProjectDiscoveryMode={isDiscoveryProject(project)}
       />
     </PageLayout>
   );

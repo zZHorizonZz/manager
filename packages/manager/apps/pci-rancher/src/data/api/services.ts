@@ -1,4 +1,5 @@
 import { apiClient, fetchIcebergV2 } from '@ovh-ux/manager-core-api';
+import { getCatalog } from '@ovh-ux/manager-pci-common';
 import {
   CreateRancherPayload,
   PciProject,
@@ -85,6 +86,18 @@ export const createRancherService = async ({
   });
 };
 
+export const patchRancherService = async ({
+  projectId,
+  data,
+}: {
+  projectId: string;
+  data: CreateRancherPayload;
+}) => {
+  return apiClient.v2.put(getRancherByProjectIdQueryKey(projectId), {
+    targetSpec: data,
+  });
+};
+
 export const deleteRancherService = async ({
   rancherId,
   projectId,
@@ -162,3 +175,11 @@ export const getListingIceberg = async () => {
     return Promise.reject(error);
   }
 };
+
+export const getCloudCatalog = (ovhSubsidiary: string) =>
+  getCatalog(ovhSubsidiary, 'cloud');
+
+export const getCatalogQuery = (ovhSubsidiary: string) => ({
+  queryKey: ['public-cloud-catalog', ovhSubsidiary],
+  queryFn: () => getCloudCatalog(ovhSubsidiary),
+});

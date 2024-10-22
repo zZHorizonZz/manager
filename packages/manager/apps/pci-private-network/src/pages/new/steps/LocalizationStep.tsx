@@ -33,7 +33,7 @@ export default function LocalizationStep(): JSX.Element {
   const { t } = useTranslation('new');
   const { t: tCommon } = useTranslation('common');
   const { t: tRegion } = useTranslation('region');
-  const { t: tRegions } = useTranslation('regions');
+  const { t: tRegions, i18n } = useTranslation('regions');
 
   const {
     data: regions,
@@ -41,32 +41,22 @@ export default function LocalizationStep(): JSX.Element {
   } = useProjectAvailableRegions(store.project?.id);
 
   const [mappedRegions, setMappedRegions] = useState<TMappedRegion[]>([]);
-
   const [state, setState] = useState<{ selectedContinent: string }>({
     selectedContinent: undefined,
   });
 
   const getMacroRegion = (regionName: string) => {
-    const localZonePattern = /^lz/i;
-    let macro: RegExpExecArray;
-    if (
-      localZonePattern.test(
-        regionName
-          .split('-')
-          ?.slice(2)
-          ?.join('-'),
-      )
-    ) {
-      macro = /\D{2,3}/.exec(
-        regionName
-          .split('-')
-          ?.slice(3)
-          ?.join('-'),
-      );
-    } else {
-      macro = /\D{2,3}/.exec(regionName);
-    }
-    return macro ? macro[0].replace('-', '').toUpperCase() : '';
+    const regionSubStrings = regionName.split('-');
+
+    const macroRegionMap = [
+      null,
+      regionSubStrings[0].split(/(\d)/)[0],
+      regionSubStrings[0],
+      regionSubStrings[2],
+      regionSubStrings[2] === 'LZ' ? regionSubStrings[3] : regionSubStrings[2],
+      regionSubStrings[3],
+    ];
+    return macroRegionMap[regionSubStrings.length] || 'Unknown_Macro_Region';
   };
 
   const getTranslatedMacroRegion = ({ name }: TRegion) => {
@@ -121,7 +111,7 @@ export default function LocalizationStep(): JSX.Element {
 
       setMappedRegions(result);
     }
-  }, [regions]);
+  }, [regions, i18n.language]);
 
   return (
     <StepComponent

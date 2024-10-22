@@ -1,6 +1,13 @@
 import { format } from 'date-fns';
+import * as locales from 'date-fns/locale';
+import { getDateFnsLocale } from '@ovh-ux/manager-core-utils';
 
-import { CommonTitle, TileBlock } from '@ovh-ux/manager-react-components';
+import {
+  CommonTitle,
+  Notifications,
+  TileBlock,
+  useNotifications,
+} from '@ovh-ux/manager-react-components';
 import { OdsHTMLAnchorElementTarget } from '@ovhcloud/ods-common-core';
 import { ODS_THEME_COLOR_INTENT } from '@ovhcloud/ods-common-theming';
 import {
@@ -17,12 +24,13 @@ import {
   OsdsText,
   OsdsTile,
 } from '@ovhcloud/ods-components/react';
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useHref } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 import { MutationStatus } from '@tanstack/react-query';
 import {
+  RancherPlanName,
   RancherService,
   RancherVersion,
   ResourceStatus,
@@ -38,7 +46,9 @@ export interface RancherDetailProps {
   rancher: RancherService;
   editNameResponseType: ODS_MESSAGE_TYPE | null;
   updateSoftwareResponseType: MutationStatus;
+  updateOfferResponseType: MutationStatus;
   hasErrorAccessDetail: boolean;
+  updateOfferErrorMessage?: string;
   versions: RancherVersion[];
 }
 
@@ -46,26 +56,47 @@ const RancherDetail = ({
   rancher,
   editNameResponseType,
   updateSoftwareResponseType,
+  updateOfferResponseType,
   hasErrorAccessDetail,
+  updateOfferErrorMessage,
   versions,
 }: RancherDetailProps) => {
-  const { t } = useTranslation(['dashboard', 'updateSoftware', 'listing']);
+  const { t, i18n } = useTranslation([
+    'dashboard',
+    'updateSoftware',
+    'listing',
+  ]);
   const trackAction = useTrackingAction();
   const hrefEdit = useHref('./edit');
   const hrefUpdateSoftware = useHref('./update-software');
   const hrefGenerateAccess = useHref('./generate-access');
+  const hrefUpdateOffer = useHref('./update-offer');
   const [isPendingUpdate, setIsPendingUpdate] = useState(false);
+  const [isPendingOffer, setIsPendingOffer] = useState(false);
   const [hasTaskPending, setHasTaskPending] = useState(false);
   const { resourceStatus, currentState, currentTasks } = rancher;
+  const { addError, addInfo, clearNotifications } = useNotifications();
+
+  useEffect(() => {
+    if (updateOfferErrorMessage) {
+      addError(
+        t('updateOfferError', { errorMessage: updateOfferErrorMessage }),
+      );
+    }
+  }, [updateOfferErrorMessage]);
 
   useEffect(() => {
     if (updateSoftwareResponseType === 'pending') {
       setIsPendingUpdate(true);
     }
-  }, [updateSoftwareResponseType]);
+    if (updateOfferResponseType === 'pending') {
+      setIsPendingOffer(true);
+    }
+  }, [updateSoftwareResponseType, updateOfferResponseType]);
 
   useEffect(() => {
     if (currentTasks.length) {
+      addInfo(t('updateOfferPending'));
       setHasTaskPending(true);
     }
   }, [currentTasks]);
@@ -74,12 +105,18 @@ const RancherDetail = ({
     if (hasTaskPending && currentTasks.length === 0) {
       setIsPendingUpdate(false);
       setHasTaskPending(false);
+      setIsPendingOffer(false);
+    }
+    if (currentTasks.length === 0) {
+      clearNotifications();
     }
   }, [currentTasks]);
 
-  const computedStatus = isPendingUpdate
-    ? ResourceStatus.UPDATING
-    : resourceStatus;
+  const computedStatus =
+    isPendingUpdate || isPendingOffer
+      ? ResourceStatus.UPDATING
+      : resourceStatus;
+
   const isReadyStatus = computedStatus === ResourceStatus.READY;
 
   const { name, version, plan, url } = currentState;
@@ -89,14 +126,29 @@ const RancherDetail = ({
 
   const onAccessRancherUrl = () =>
     trackAction(TrackingPageView.DetailRancher, TrackingEvent.accessUi);
-
   const shouldDisplayUpdateSoftware =
     getLatestVersionAvailable(rancher, versions) &&
     isReadyStatus &&
     !updateSoftwareResponseType;
 
+  const userLocale = getDateFnsLocale(i18n.language);
+
+  const displayDate = useCallback(
+    (value: string) =>
+      format(new Date(dateUsage), value, {
+        locale:
+          userLocale in locales
+            ? locales[userLocale as keyof typeof locales]
+            : locales.fr,
+      }),
+    [userLocale, locales, dateUsage],
+  );
+
+  const isEligibleForUpgrade = plan === RancherPlanName.OVHCLOUD_EDITION;
+
   return (
     <div className="max-w-4xl">
+      <Notifications></Notifications>
       {editNameResponseType && (
         <OsdsMessage type={editNameResponseType} className="my-4 p-3">
           <OsdsText
@@ -138,7 +190,12 @@ const RancherDetail = ({
                   isDisabled={!isReadyStatus}
                 />
               </TileBlock>
-
+              <TileBlock label={'ID'}>
+                <OsdsClipboard aria-label="clipboard-id" value={rancher.id}>
+                  <span slot="success-message">{t('copy')}</span>
+                  <span slot="error-message">{t('error')}</span>
+                </OsdsClipboard>
+              </TileBlock>
               <TileBlock label={t('rancher_version')}>
                 <OsdsText color={ODS_THEME_COLOR_INTENT.text}>
                   {version}
@@ -200,17 +257,23 @@ const RancherDetail = ({
                 <OsdsText color={ODS_THEME_COLOR_INTENT.text}>
                   {t(plan)}
                 </OsdsText>
+                <LinkIcon
+                  iconName={ODS_ICON_NAME.ARROW_RIGHT}
+                  href={hrefUpdateOffer}
+                  text={t('updateOfferModaleTitle')}
+                  isDisabled={!isReadyStatus}
+                />
               </TileBlock>
               <TileBlock label={t('count_cpu_orchestrated')}>
                 <OsdsText color={ODS_THEME_COLOR_INTENT.text}>
-                  {rancher.currentState.usage?.orchestratedVcpus || '-'}
+                  {rancher.currentState.usage?.orchestratedVcpus}
                 </OsdsText>
-                {dateUsage && (
+                {displayDate && (
                   <div className="mt-3">
                     <OsdsText color={ODS_THEME_COLOR_INTENT.text}>
                       {t('last_update_date', {
-                        date: format(dateUsage, 'yyyy_MM_dd'),
-                        hour: format(dateUsage, 'HH:mm:ss'),
+                        date: displayDate('PPPP'),
+                        hour: displayDate('HH:mm:ss'),
                       })}
                     </OsdsText>
                   </div>
@@ -219,6 +282,28 @@ const RancherDetail = ({
             </div>
           </OsdsTile>
         </div>
+        {isEligibleForUpgrade && (
+          <div className="p-3">
+            <OsdsTile
+              className="w-full flex-col bg-[--ods-color-blue-100] border-none"
+              inline
+              rounded
+            >
+              <div className="flex flex-col w-full">
+                <CommonTitle>{t('upgradePlanTitle')}</CommonTitle>
+                <OsdsText color={ODS_THEME_COLOR_INTENT.text} className="my-5">
+                  {t('upgradePlanDescription')}
+                </OsdsText>
+                <LinkIcon
+                  iconName={ODS_ICON_NAME.ARROW_RIGHT}
+                  href={hrefUpdateOffer}
+                  text={t('upgradePlanButton')}
+                  isDisabled={!isReadyStatus}
+                />
+              </div>
+            </OsdsTile>
+          </div>
+        )}
       </div>
     </div>
   );

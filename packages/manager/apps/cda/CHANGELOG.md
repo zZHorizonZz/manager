@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.8](https://github.com/ovh/manager/compare/@ovh-ux/manager-cda-app@2.3.7...@ovh-ux/manager-cda-app@2.3.8) (2024-10-22)
+
+**Note:** Version bump only for package @ovh-ux/manager-cda-app
+
+
+
+
+
+## [2.3.7](https://github.com/ovh/manager/compare/@ovh-ux/manager-cda-app@2.3.6...@ovh-ux/manager-cda-app@2.3.7) (2024-10-21)
+
+**Note:** Version bump only for package @ovh-ux/manager-cda-app
+
+
+
+
+
+## [2.3.6](https://github.com/ovh/manager/compare/@ovh-ux/manager-cda-app@2.3.5...@ovh-ux/manager-cda-app@2.3.6) (2024-10-03)
+
+**Note:** Version bump only for package @ovh-ux/manager-cda-app
+
+
+
+
+
+## [2.3.5](https://github.com/ovh/manager/compare/@ovh-ux/manager-cda-app@2.3.4...@ovh-ux/manager-cda-app@2.3.5) (2024-09-26)
+
+**Note:** Version bump only for package @ovh-ux/manager-cda-app
+
+
+
+
+
 ## [2.3.4](https://github.com/ovh/manager/compare/@ovh-ux/manager-cda-app@2.3.3...@ovh-ux/manager-cda-app@2.3.4) (2024-08-29)
 
 **Note:** Version bump only for package @ovh-ux/manager-cda-app
